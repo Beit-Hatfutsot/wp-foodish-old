@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 function register_scripts() {
 
-   wp_register_script ( 'Global', get_bloginfo('stylesheet_directory') . '/assets/js/global.js', array('jquery'), true );
+   wp_register_script ( 'Global', get_bloginfo('stylesheet_directory') . '/assets/js/global.js', array('jquery'), '1.0.1', true );
    wp_enqueue_script  ( 'Global' );
  
 }
