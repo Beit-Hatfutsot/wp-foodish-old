@@ -13,3 +13,6 @@ require_once('functions/scripts.php');
 
 // SEO
 require_once('functions/seo.php');
+
+// Active Trial Integration
+require_once('functions/active-trial.php');

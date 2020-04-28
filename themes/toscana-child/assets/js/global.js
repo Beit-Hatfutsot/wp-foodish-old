@@ -31,12 +31,18 @@ var $ = jQuery,
 		 * @return	N/A
 		 */
 		mainMenu : function() {
-		       $('#header .nav-main,#header .widget-header,#header .logo').hide();
+		    
+            $('#header .nav-main,#header .widget-header,#header .logo').hide();
             
             $( ".menu-toggle.desktop" ).click(function() {
                $('#header').toggleClass('closed');  
 
                $('#header .nav-main,#header .widget-header,#header .logo').fadeToggle(100);
+            });
+            
+            // Hide menu on item click
+            $( ".nav-main ul li a" ).click(function() {
+               $( ".menu-toggle.desktop" ).click();
             });
 
 		},
@@ -55,6 +61,11 @@ var $ = jQuery,
             
             $( ".mobile-menu-container .closeButton" ).click(function() {
               $('.mobile-menu-container').removeClass('open');
+            });
+            
+            // Hide menu on item click
+            $( ".mobile-menu li a" ).click(function() {
+                $( ".menu-toggle.mobile" ).click();
             });
 
 		},
