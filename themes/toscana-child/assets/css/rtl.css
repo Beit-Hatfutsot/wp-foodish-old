@@ -1,0 +1,560 @@
+@import "../../../toscana/assets/css/rtl.min.css";
+
+/****************************************************************
+ 
+----------------------------- HEADER ----------------------------
+ 
+***************************************************************/  
+
+
+/* -- ***** Menu 
+ ---------------------------------------------------------------*/
+ 
+.sf-menu li a {
+    text-align: right;
+}
+  
+  
+.sf-menu li a:before {
+    right: 0;
+}  
+
+
+.menu-toggle {
+    margin: 40px 27px 0 0;
+}
+
+/* -- ***** Widget Area 
+ ---------------------------------------------------------------*/ 
+
+.widget-header {
+    padding-right: 15px !important;
+}
+
+
+
+.header-bottom-facebook img {
+    margin-right: 17px;
+}
+
+
+
+
+/****************************************************************
+ 
+----------------------------- Pages ----------------------------
+                             
+                             Homepage
+ 
+****************************************************************/  
+
+
+/* -- ***** First Section 
+---------------------------------------------------------------*/ 
+
+
+.section1__pepper {
+    
+    left: 2%;
+    right:auto;
+}
+
+
+.section1__text-top-right {
+    right: 25%;
+    left: auto;
+}
+
+
+.section1__text-bottom-right {
+    right: 22%;
+    left: auto;
+}
+
+.section1__text-bottom-left {
+    left: 5.20%;
+    right:auto;
+}
+
+.language-switcher {
+
+  left: 2.76%;
+  right:auto;
+}
+
+
+
+/* -- ***** 2nd Section 
+---------------------------------------------------------------*/
+
+.section2__beetsweb {
+    right: 0;
+    left:auto;
+}
+
+.section2__phone {
+    left: auto;
+    right: 18.0%;
+}
+
+
+.section2__beetsweb img { 
+    transform: none;
+}
+
+.section2__text-container {
+    top: 32%;
+    left: 5%;
+    right: auto;
+}
+
+
+
+/* -- ***** 3rd Section 
+---------------------------------------------------------------*/
+
+
+.section3__leaves {
+    left: 0;
+    right:auto;
+}
+
+
+.section3__book {
+    left: 6%;
+    right:auto;
+}
+
+.section3__text-container {
+    right: 18%;
+    left: auto;
+}
+
+
+
+/* -- ***** 4th Section 
+---------------------------------------------------------------*/
+
+.section4__people {
+    right: 20.5%;
+    left: auto;
+}
+
+.section4__text-container {
+    left: 9%;
+    right:auto;
+}
+
+
+
+
+
+/* -- ***** 5th Section 
+---------------------------------------------------------------*/
+
+.section5__title-container {
+    right: 23.4%;
+    left: auto;
+}
+
+.section5__title {
+    font-weight: bold;
+}
+
+.section5__logo {
+    right: 23.4%;
+    left: auto;
+}
+
+
+.section5__text-container {
+    left: 1%;
+    right:auto;
+}
+
+
+.section5__button_container {
+    left: 5.62%;
+    right:auto;
+}
+
+
+.section5__button_container a span {
+    padding: 0 1vw 0 0;
+}
+
+
+
+/* -- ***** 6th Section 
+---------------------------------------------------------------*/
+
+.section6__apron {
+    right: 14.5%;
+    left: auto;
+}
+
+
+.section6__text-container {
+    top: 37%;
+    left: 9%;
+    right: auto;
+}
+
+
+
+
+ 
+ /* -- ***** 7th Section 
+---------------------------------------------------------------*/
+
+.section7__peel {
+    left: 3%;
+    right: auto;
+}
+
+
+.section7__text-container {
+    right: 23.177%;
+    left: auto;
+}
+
+.contact-form-yellow-section {
+    width: 26vw;
+    right: 23.177%;
+    left:auto;
+}
+
+
+.contact-form-yellow-section input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  text-align: right;
+}
+.contact-form-yellow-section input::-moz-placeholder { /* Firefox 19+ */
+  text-align: right;
+}
+.contact-form-yellow-section input:-ms-input-placeholder { /* IE 10+ */
+  text-align: right;
+}
+.contact-form-yellow-section input:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+}
+
+.contact-form-yellow-section textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  text-align: right;
+}
+.contact-form-yellow-section textarea::-moz-placeholder { /* Firefox 19+ */
+  text-align: right;
+}
+.contact-form-yellow-section textarea:-ms-input-placeholder { /* IE 10+ */
+  text-align: right;
+}
+.contact-form-yellow-section textarea:-moz-placeholder { /* Firefox 18- */
+  text-align: right;
+}
+
+
+
+/**************/
+/* Responsive */
+/**************/
+
+
+@media (max-width: 767px) {
+
+
+/****************************************************************
+ 
+----------------------------- HEADER ----------------------------
+ 
+***************************************************************/  
+
+    .header-bottom-facebook img {
+        margin-right: 30px;
+    }
+    
+    
+    .mobile-header .menu-toggle {
+       margin: 30px 15px 0 0; 
+    }
+    
+    .mobile-menu-container {
+      right: 0;
+    }
+    
+    .mobile-menu-container .closeButton {
+       right: 25px;   
+    }
+    
+    .mobile-menu-container .mobile-menu {
+        padding-right: 0;
+    }
+
+
+/* -- ***** 2th Section 
+---------------------------------------------------------------*/
+    
+  .section2__text-container {
+    top: auto;
+    bottom:auto;
+    right: auto;
+    left: auto;
+  }
+  
+  .section2__beetsweb {
+    transform: scaleX(-1);
+  }
+  
+    .section2__phone {
+        right: -39px;
+    }
+    
+
+/* -- ***** 3rd Section 
+---------------------------------------------------------------*/
+
+    #section3 {
+        overflow: hidden;
+    }
+
+    .section3__text-container {
+        position: relative;
+        right: auto;
+        left: auto;
+        top: auto;
+        width: auto;
+        
+        padding: 0 30px;
+        
+    }
+    
+    .section3__book {
+        left: -2px;
+        right: auto;
+    }
+    
+    .section3__leaves-mobile {
+        left: -66px;
+        text-align: left;
+    }
+
+
+
+
+/* -- ***** 4th Section 
+---------------------------------------------------------------*/
+
+    
+    .section4__text-container {
+        position: relative;
+        right: auto;
+        left: auto;
+        top: auto;
+        width: auto;
+        
+        padding: 0 30px;
+        
+    }
+
+
+    .section4__people {
+        left: auto;
+        right: auto;
+    }    
+
+
+  
+/* -- ***** 5th Section 
+---------------------------------------------------------------*/    
+   
+   
+ .section5__text-container {
+        position: relative;
+        right: auto;
+        left: auto;
+        top: auto;
+        width: auto;
+        
+        padding: 0 30px;
+        
+    }
+    
+    .section5__logo {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        
+        margin: 30px auto 50px;
+        text-align: center;
+        padding: 0 30px;
+    }
+    
+    .section5__logo img {
+       width: auto;
+    }
+    
+    .section5__title-container {
+        position: relative;
+        left: auto;
+        right: auto;
+        top: auto;    
+    }
+    
+    
+    .section5__title {
+        font-size: 28px;
+        padding: 0 30px;
+        margin-bottom: 40px;
+    }
+    
+    .section5__text p {
+       margin-bottom: 6vw;
+    }
+    
+    .section5__button_container {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        left: auto;
+        width: 100%;
+    }
+    
+    .section5__button_container a.button {
+        color: #4618ce;
+        border: none;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 25px;
+        display: block;
+        background: #fcf239;
+        margin-bottom: 30px;
+    }
+
+
+
+/* -- ***** 6th Section 
+---------------------------------------------------------------*/
+
+
+         
+    .section6__text-container {
+        position: relative;
+        right: auto;
+        left: auto;
+        top: auto;
+        width: auto;
+        
+        padding: 50px 30px 50px;
+        
+    }
+    
+    
+    .section6__apron-mobile {
+        right: auto;
+        left: -89px;
+        top: -347px;
+        z-index: 1;
+    }
+    
+    .section6__text {
+        z-index: 3;
+        position: relative;
+    }
+
+  
+ 
+/* -- ***** 7th Section 
+---------------------------------------------------------------*/
+    
+              
+    .section7__text-container {
+        position: relative;
+        right: auto;
+        left: auto;
+        top: auto;
+        width: auto;
+        
+        padding: 50px 30px 50px;
+    
+    }
+    
+    .section7__peel {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    
+     
+    .contact-form-yellow-section {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: auto;
+        padding: 0 30px;
+    }
+    
+    
+    .contact-form-yellow-section .pojo-form-text-input input {
+      padding: 20px !important;
+      width: 100%;
+      font-size: 17px !important;
+    } 
+    
+    
+    .contact-form-yellow-section .pojo-form-text-input textarea { 
+        width: 100%;  
+        height: 70px;
+    }
+    
+    
+    .contact-form-yellow-section textarea {
+        height: 185px !important;
+    }
+    
+    .contact-form-newsletter-section button {
+        top: 4px;
+    }
+       
+
+} /*767*/
+
+
+
+
+
+
+
+@media (max-width: 767px) and (min-width: 550px) {
+    
+    .section2__phone {
+        right: -124px;
+        left: 0;
+    }
+    
+/* -- ***** 3th Section 
+---------------------------------------------------------------*/
+    .section3__leaves-mobile {
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        text-align: center;
+        z-index: 1;
+        top: -16px;
+    }
+    
+    .section3__leaves-mobile img {
+       width: 258px;
+    }
+    
+    .section3__book {
+        right: 0;
+        bottom: 174px;
+        left: -142px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .section3__book img {
+       width: 398px;
+    }        
+} /* 550 */

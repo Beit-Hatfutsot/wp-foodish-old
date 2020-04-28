@@ -1,0 +1,330 @@
+# Translation of Plugins - Duplicate Post - Stable (latest release) in Hebrew
+# This file is distributed under the same license as the Plugins - Duplicate Post - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-09-08 12:16:04+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: he_IL\n"
+"Project-Id-Version: Plugins - Duplicate Post - Stable (latest release)\n"
+
+#: duplicate-post-options.php:367
+msgid "now works on Edit screen too - check this option to use with Gutenberg enabled"
+msgstr "פועל כעת במסך העריכה הקלאסי - כדאי לבדוק שימוש במסך העריכה של גוטנברג"
+
+#: duplicate-post-admin.php:194
+msgid "What's new in Duplicate Post version %s:"
+msgstr "מה חדש בגרסה %s של 'משכפל הפוסטים':"
+
+#: duplicate-post-admin.php:195
+msgid "Fixes for some bugs and incompatibilities with CF7, WPML, and custom post types with custom capabilities."
+msgstr "תיקונים עבור כמה באגים וחוסר תאימות עם CF7, WPML, וסוגי פוסט מותאמים עם יכולות מיוחדות."
+
+#: duplicate-post-admin.php:281
+msgid "Current user is not allowed to copy posts."
+msgstr "רמת ההרשאה שלך במשתמש הנוכחי אינה מאפשרת להעתיק פוסטים."
+
+#: duplicate-post-admin.php:196
+msgid "Check out the documentation"
+msgstr "בדוק את התיעוד"
+
+#: duplicate-post-admin.php:197
+msgid "Serving the WordPress community since November 2007."
+msgstr "משרת את קהילת וורדפרס מאז נובמבר 2007."
+
+#. Plugin URI of the plugin
+msgid "https://duplicate-post.lopo.it/"
+msgstr "https://duplicate-post.lopo.it/"
+
+#: duplicate-post-options.php:232
+msgid "you probably want this unchecked, unless you have very special requirements"
+msgstr "סביר להניח שתרצו את התיבה הזו מסומנת, אלא אם כן יש לך דרישות מיוחדות מאוד"
+
+#: duplicate-post-options.php:88 duplicate-post-admin.php:654
+msgid "Documentation"
+msgstr "תיעוד"
+
+#: duplicate-post-admin.php:197
+msgid "Help me develop the plugin and provide support by <a href=\"%s\">donating even a small sum</a>."
+msgstr "עזרו לפתח את התוסף באמצעות <a href=\"%s\">תרומה</a>, גם בסכום קטן."
+
+#: duplicate-post-options.php:382
+msgid "Show update notice"
+msgstr "הצג התראה לעדכון"
+
+#: duplicate-post-options.php:371
+msgid "Bulk Actions"
+msgstr "פעולה קבוצתית"
+
+#: duplicate-post-options.php:282
+msgid "You can use * to match zero or more alphanumeric characters or underscores: e.g. field*"
+msgstr "ניתן להשתמש ב- * כתו כללי עבור כל מספר של תווים אלפאנומריים, למשל. שדה*"
+
+#: duplicate-post-options.php:241
+msgid "Menu order"
+msgstr "סדר פריט"
+
+#: duplicate-post-options.php:226
+msgid "Author"
+msgstr "מחבר"
+
+#: duplicate-post-options.php:223
+msgctxt "post format"
+msgid "Format"
+msgstr "פורמט"
+
+#: duplicate-post-options.php:220
+msgid "Template"
+msgstr "תבנית"
+
+#: duplicate-post-options.php:217
+msgid "Featured Image"
+msgstr "תמונה ראשית"
+
+#: duplicate-post-options.php:90
+msgid "Support Forum"
+msgstr "פורום תמיכה"
+
+#: duplicate-post-options.php:84
+msgid "Donate whatever sum you choose, even just 10¢."
+msgstr "לתרום כל סכום שתבחר, אפילו רק 10 אג'."
+
+#: duplicate-post-options.php:82
+msgid "Help me develop the plugin, add new features and improve support!"
+msgstr "עיזור לפתח את התוסף, להוסיף תכונות חדשות ולשפר את התמיכה!"
+
+#: duplicate-post-admin.php:196
+msgid "Please <a href=\"%s\">review the settings</a> to make sure it works as you expect."
+msgstr "בבקשה <a href=\"%s\">בדקו את ההגדרות</a> כדי לוודא שזה עובד כמו שאתם מצפים."
+
+#: duplicate-post-admin.php:665
+msgid "%s item copied."
+msgid_plural "%s items copied."
+msgstr[0] "פריט %s הועתק."
+msgstr[1] "%s פריטים הועתקו."
+
+#: duplicate-post-options.php:377
+msgid "You can also use the template tag duplicate_post_clone_post_link( $link, $before, $after, $id ). More info <a href=\"%s\">here</a>"
+msgstr "ניתן גם להשתמש בתג התבנית duplicate_post_clone_post_link( $link, $before, $after, $id ). מידע נוסף <a href=\"%s\">כאן</a>"
+
+#: duplicate-post-options.php:350 duplicate-post-options.php:376
+msgid "Whether the links are displayed for custom post types registered by themes or plugins depends on their use of standard WordPress UI elements"
+msgstr "אם הקישורים המוצגים עבור סוגי פוסט מותאמים אישית רשומים על ידי ערכת הנושא או על ידי תוסף השימוש שלהם תלוי באלמנטים סטנדרטיים של WordPress UI"
+
+#: duplicate-post-options.php:349
+msgid "Select the post types you want the plugin to be enabled"
+msgstr "בחר את סוג התוכן (post types) שברצונך להפעיל עבורו את הפלאגין"
+
+#: duplicate-post-options.php:340
+msgid "Enable for these post types"
+msgstr "הפעל עבור סוגי פוסטים אלו"
+
+#: duplicate-post-options.php:334
+msgid "Passwords and contents of password-protected posts may become visible to undesired users and visitors"
+msgstr "סיסמאות ותכנים של פוסטים המוגנים באמצעות סיסמה עשויים להיות גלויים למשתמשים ולאורחים לא רצויים"
+
+#: duplicate-post-options.php:289
+msgid "Show/hide private taxonomies"
+msgstr "הצג/הסתר טקסונומיה פרטית"
+
+#: duplicate-post-options.php:271
+msgid "Add this number to the original menu order (blank or zero to retain the value)"
+msgstr "הוספו מספר זה לסדר התפריט המקורי (השאירו ריק או אפס כדי לשמור על הערך המקורי)"
+
+#: duplicate-post-options.php:266
+msgid "Increase menu order by"
+msgstr "הוספת סדר תפריט לפי"
+
+#: duplicate-post-options.php:238
+msgid "except pingbacks and trackbacks"
+msgstr "למעט פינגבאק (pingbacks) וטראקבק (trackbacks)"
+
+#: duplicate-post-options.php:238
+msgid "Comments"
+msgstr "תגובות"
+
+#: duplicate-post-options.php:235
+msgid "Children"
+msgstr "ילדים"
+
+#: duplicate-post-options.php:232
+msgid "Attachments"
+msgstr "קבצים מצורפים"
+
+#: duplicate-post-options.php:229
+msgid "Password"
+msgstr "סיסמה"
+
+#: duplicate-post-options.php:214
+msgid "Content"
+msgstr "תוכן"
+
+#: duplicate-post-options.php:211
+msgid "Excerpt"
+msgstr "תיאור"
+
+#: duplicate-post-options.php:208
+msgid "Slug"
+msgstr "מזהה"
+
+#: duplicate-post-options.php:205
+msgid "Status"
+msgstr "סטטוס"
+
+#: duplicate-post-options.php:202
+msgid "Date"
+msgstr "תאריך"
+
+#: duplicate-post-options.php:199
+msgid "Title"
+msgstr "כותרת"
+
+#: duplicate-post-options.php:195
+msgid "Post/page elements to copy"
+msgstr "אלמנטים שיועתקו"
+
+#: duplicate-post-options.php:187
+msgid "Display"
+msgstr "הצג"
+
+#: duplicate-post-options.php:185
+msgid "Permissions"
+msgstr "הרשאות"
+
+#: duplicate-post-options.php:183
+msgid "What to copy"
+msgstr "מה להעתיק"
+
+#: duplicate-post-admin.php:561
+msgid "Untitled"
+msgstr "ללא כותרת"
+
+#: duplicate-post-admin.php:542
+msgid "Copy features for this post type are not enabled in options page"
+msgstr "תכונות ההעתקה אינן מופעלות עבור סוג תוכן זה בדף האפשרויות"
+
+#: duplicate-post-admin.php:200
+msgid "Dismiss this notice."
+msgstr "בטל את ההתראה."
+
+#. Author URI of the plugin
+msgid "https://lopo.it"
+msgstr "https://lopo.it"
+
+#. Author of the plugin
+msgid "Enrico Battocchi"
+msgstr "אנריקו בטוחי"
+
+#. Description of the plugin
+msgid "Clone posts and pages."
+msgstr "שיכפול פוסטים ועמודים."
+
+#: duplicate-post.php:49
+msgid "Settings"
+msgstr "הגדרות"
+
+#: duplicate-post-options.php:392
+msgid "Save Changes"
+msgstr "שמירת שינויים"
+
+#: duplicate-post-options.php:367
+msgid "Admin bar"
+msgstr "בר ניהול"
+
+#: duplicate-post-options.php:365
+msgid "Edit screen"
+msgstr "מסך עריכה"
+
+#: duplicate-post-options.php:363
+msgid "Post list"
+msgstr "רשימת פוסטים"
+
+#: duplicate-post-options.php:359
+msgid "Show links in"
+msgstr "הצג קישורים ב"
+
+#: duplicate-post-options.php:333
+msgid "Warning: users will be able to copy all posts, even those of other users"
+msgstr "אזהרה: משתמשים יוכלו להעתיק את כל הפוסטים, גם של משתמשים אחרים"
+
+#: duplicate-post-options.php:316
+msgid "Roles allowed to copy"
+msgstr "תפקידים שמותר להעתיק"
+
+#: duplicate-post-options.php:261
+msgid "Suffix to be added after the title, e.g. \"(dup)\" (blank for no suffix)"
+msgstr "הקידומת מתווספת לפני הכותרת המקורית."
+
+#: duplicate-post-options.php:256
+msgid "Title suffix"
+msgstr "סיומת לכותרת"
+
+#: duplicate-post-options.php:251
+msgid "Prefix to be added before the title, e.g. \"Copy of\" (blank for no prefix)"
+msgstr "הסיומת מתווספת אחרי הכותרת המקורית."
+
+#: duplicate-post-options.php:246
+msgid "Title prefix"
+msgstr "קידומת הכותרת"
+
+#: duplicate-post-options.php:306
+msgid "Select the taxonomies you don't want to be copied"
+msgstr "טקסונומיות שאין להעתיק"
+
+#: duplicate-post-options.php:287
+msgid "Do not copy these taxonomies"
+msgstr "אין להעתיק טקסונומיות אלה"
+
+#: duplicate-post-options.php:281
+msgid "Comma-separated list of meta fields that must not be copied"
+msgstr "שדות מיוחדים מופרדים בפסיקים שאין להעתיק"
+
+#: duplicate-post-options.php:276
+msgid "Do not copy these fields"
+msgstr "אין להעתיק שדות אלו"
+
+#. Plugin Name of the plugin
+#: duplicate-post-options.php:46
+msgid "Duplicate Post"
+msgstr "שכפול הודעות"
+
+#: duplicate-post-options.php:46 duplicate-post-options.php:76
+msgid "Duplicate Post Options"
+msgstr "אפשרויות שכפול הודעות"
+
+#: duplicate-post-options.php:89
+msgid "Translate"
+msgstr "תרגום"
+
+#: duplicate-post-admin.php:655
+msgid "Donate"
+msgstr "תרומה"
+
+#: duplicate-post-admin.php:325
+msgid "Copy creation failed, could not find original:"
+msgstr "יצירת העתק נכשל, לא ניתן למצוא את המקור:"
+
+#: duplicate-post-admin.php:285
+msgid "No post to duplicate has been supplied!"
+msgstr "לא סופקה הודעה לשכפול!"
+
+#: duplicate-post-admin.php:238
+msgid "New Draft"
+msgstr "טיוטה חדשה"
+
+#: duplicate-post-common.php:78 duplicate-post-common.php:81
+#: duplicate-post-common.php:115 duplicate-post-common.php:127
+#: duplicate-post-admin.php:237 duplicate-post-admin.php:254
+msgid "Copy to a new draft"
+msgstr "העתקה לטיוטה חדשה"
+
+#: duplicate-post-admin.php:235 duplicate-post-admin.php:689
+msgid "Clone"
+msgstr "שיכפול"
+
+#: duplicate-post-admin.php:234
+msgid "Clone this item"
+msgstr "שיכפול"
