@@ -202,7 +202,7 @@ p {
 
 
 .sf-menu li {
-    margin-bottom: 4.45vh;
+    margin-bottom: 2.8vh; /*4.45vh;*/
 }
 
 
@@ -210,6 +210,16 @@ p {
     position: relative;
     font-family: 'Arimo', 'TGPraktikal-Bold', sans-serif;
     font-size: calc( 16px + (24 - 16) * (100vw - 768px) / (1920 - 768) ) !important;
+}
+
+body.home .sf-menu li.active a:not(:hover), 
+body.home .sf-menu li.current-menu-item > a:not(:hover) {
+    color: #fff;
+}
+
+body.home .sf-menu .sfHover > a, 
+body.home .sf-menu .sfHover > li.current-menu-item > a {
+    color: #fcf239;
 }
 
 
@@ -1015,9 +1025,6 @@ p {
 
 
 
-
-
-
 .contact-form-newsletter-section  input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #FFF;
   font-size: 0.938vw;
@@ -1026,6 +1033,226 @@ p {
 }
 
 
+
+
+/****************************************************************
+ 
+------------------------- Regular Pages -------------------------
+                             
+****************************************************************/  
+
+
+body:not(.home) {
+    color: #fff;
+    background-color: #24206a;
+}
+
+
+body:not(.home) .container {
+    max-width: 1170px !important;
+}
+
+
+body:not(.home) .page-title {
+    margin-top: 114px;
+}
+
+
+body:not(.home) .page-title h1 {
+    color: #56de83;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+
+body:not(.home) #breadcrumbs {
+    margin-bottom: 16px;
+}
+
+body:not(.home) #breadcrumbs,
+body:not(.home) #breadcrumbs a {
+    color: #fff !important;
+    font-style: normal !important;
+    line-height: 1em;
+}
+
+
+/* Blog Grid */
+
+
+.pojo-loadmore-wrap  a.button.pojo-load-more,
+#main > div.pojo-infscr-loader.processing > div.pojo-loading-wrap > div {
+    color: #FFF;
+    border: 3px solid #FFF;
+    font-weight: bold;
+    /*font-size: 1.5vw;*/
+    /*padding: 0.521vw 2.031vw;*/
+}
+
+/* grid item title */
+body:not(.home) #grid-items .grid-item.grid-two h4.grid-heading {
+  font-weight: 600;  
+}
+
+
+body:not(.home) #grid-items .grid-item.grid-two h4.grid-heading a:hover {
+    color: #000;
+}
+
+/* Exerpct*/
+body:not(.home) #grid-items .grid-item .caption p {}
+
+/* Meta */
+body:not(.home) #grid-items .grid-item.grid-two .entry-meta span {
+    font-size: 12px;
+}
+
+
+
+/* Yellow main box */
+body:not(.home) #grid-items .grid-item.grid-two:nth-child(3n+1) .inbox {
+    background: #fcf239;
+}
+
+
+/* Yellow main box -> title */
+body:not(.home) #grid-items .grid-item.grid-two:nth-child(3n+1) h4.grid-heading {
+  color: #4618ce;  
+}
+
+
+
+/* Yellow main box -> meta */
+body:not(.home) #grid-items .grid-item.grid-two:nth-child(3n+1) .entry-meta span {
+    color: #000;    
+}
+
+
+/* Yellow main box -> excerpt */
+body:not(.home) #grid-items .grid-item.grid-two:nth-child(3n+1) .caption p {
+    color: #000;
+}
+
+
+/************************************/
+
+
+/* Purple main box */
+body:not(.home) #grid-items .grid-item.grid-two:nth-child(3n+2) .inbox {
+    background: #4618ce;
+}
+
+
+
+/* Purple main box -> title */
+body:not(.home) #grid-items .grid-item.grid-two:nth-child(3n+2) h4.grid-heading {
+  color: #fcf239;  
+}
+
+
+
+/* Purple main box -> meta */
+body:not(.home) #grid-items .grid-item.grid-two:nth-child(3n+2) .entry-meta span {
+    color: #FFF;    
+}
+
+
+/* Purple main box -> excerpt */
+body:not(.home) #grid-items .grid-item.grid-two:nth-child(3n+2) .caption p {
+    color: #FFF;
+}
+
+
+/************************************/
+
+
+
+/* Green */
+body:not(.home) #grid-items .grid-item.grid-two:nth-child(3n+3) .inbox {
+    background: #56de83;
+}
+
+
+
+/* Green main box -> title */
+body:not(.home) #grid-items .grid-item.grid-two:nth-child(3n+3) h4.grid-heading {
+  color: #24206a;  
+}
+
+
+
+/* Green main box -> meta */
+body:not(.home) #grid-items .grid-item.grid-two:nth-child(3n+3) .entry-meta span {
+    color: #000;    
+}
+
+
+/* Green main box -> excerpt */
+body:not(.home) #grid-items .grid-item.grid-two:nth-child(3n+3) .caption p {
+    color: #000;
+}
+
+
+/************/
+/* Single */
+/***********/
+
+
+body:not(.home).single-post {
+    color: #000;
+    background-color: #fff;
+}
+
+
+body:not(.home).single-post .page-title h1 {
+    color: #000;
+    line-height: 1.5em;
+}
+
+
+body:not(.home).single-post #breadcrumbs,
+body:not(.home).single-post #breadcrumbs a {
+    color: #000 !important;
+    font-style: normal !important;
+    line-height: 1em;
+}
+
+
+body:not(.home).single-post #header.closed .menu-toggle {
+    filter: brightness(0);
+}
+
+
+body:not(.home).single-post .language-switcher a {
+    color: #000;
+    border-bottom-color: #000;
+}
+
+
+body:not(.home).single-post .page-title h1 {
+    color: #4618ce;
+    margin-bottom: 0;
+}
+
+
+body:not(.home).single-post .entry-post .entry-meta > span {
+    color: #4618ce;
+    font-family: 'Arimo', sans-serif !important;
+    font-weight: normal;
+    font-size: 14px;
+    font-style: normal;
+    text-transform: none;
+    margin-bottom: 0;
+}
+
+
+body:not(.home).single-post .entry-post .entry-meta  {
+    display: inline-block;
+    background: #fcf239;
+    margin-bottom: 27px;
+    padding: 0 10px;
+}
 
 
 /*************************************/
@@ -1964,4 +2191,44 @@ p {
     }
     
 }
+
+
+
+
+@media (max-width: 465px) {
+    
+    /* Blog */
+    body:not(.home) #grid-items .grid-item.grid-two .pull-left {
+        max-width: 100%;
+        float: none !important;
+    } 
+    
+    
+    body:not(.home) #grid-items .grid-item.grid-two .inbox {
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
+ 
+    }
+    
+    
+    body:not(.home) #grid-items .grid-item.grid-two .inbox .caption {
+        -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        box-ordinal-group: 1;
+        
+        padding-bottom: 25px;
+    }
+    
+    body:not(.home) #grid-items .grid-item.grid-two .inbox a {
+        -webkit-box-ordinal-group: 2;
+        -moz-box-ordinal-group: 2;
+        box-ordinal-group: 2;
+    }
+    
+}/* 465 */
 

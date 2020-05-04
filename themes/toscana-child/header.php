@@ -37,7 +37,7 @@ if ( ! in_array( $header_align, array( 'left', 'right', 'center' ) ) )
                 
                 <div class="closed-header-logo hidden-xs">
                     <?php if ( ! empty( $logo_img ) ) : ?>
-                        <?php $logo_url = "#section1";?>
+                        <?php $logo_url = esc_url(home_url('/')); //"#section1"; ?>
 						<div class="logo-img">
 							<a href="<?php echo $logo_url; ?>" rel="home"><img src="<?php echo esc_attr( $logo_img ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="logo-img-primary" /></a>
 						</div>
@@ -46,7 +46,7 @@ if ( ! in_array( $header_align, array( 'left', 'right', 'center' ) ) )
                     
 				<div class="logo">
 					<?php if ( ! empty( $logo_img ) ) : ?>
-                        <?php $logo_url = "#section1"; // echo esc_url( home_url( '/' ) ); ?>
+                        <?php $logo_url = esc_url(home_url('/')); //"#section1"; ?>
 						<div class="logo-img">
 							<a href="<?php echo $logo_url; ?>" rel="home"><img src="<?php echo esc_attr( $logo_img ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="logo-img-primary" /></a>
 						</div>
@@ -84,7 +84,7 @@ if ( ! in_array( $header_align, array( 'left', 'right', 'center' ) ) )
                                 <a href="javascript:void(0)" class="closeButton">&times;</a>
                                
                                 <?php if ( ! empty( $logo_img ) ) : ?>
-                                    <?php $logo_url = "#section1";?>
+                                    <?php $logo_url = esc_url(home_url('/')); //"#section1"; ?>
             						<div class="logo-img">
             							<a href="<?php echo $logo_url; ?>" rel="home"><img src="<?php echo esc_attr( $logo_img ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="logo-img-primary" /></a>
             						</div>
