@@ -39,6 +39,23 @@
 
 
 
+.header-bottom-inst {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 15px;
+}
+
+
+.header-bottom-facebook {
+    display: inline-block;
+}
+
+
+.widget-header {
+    display: block;
+    text-align: right;
+}
+
 
 /****************************************************************
  
@@ -267,8 +284,13 @@
  
 ***************************************************************/  
 
+    .header-bottom-facebook {
+        margin-left: 0;
+    }
+
     .header-bottom-facebook img {
         margin-right: 30px;
+        margin-left: 0;
     }
     
     

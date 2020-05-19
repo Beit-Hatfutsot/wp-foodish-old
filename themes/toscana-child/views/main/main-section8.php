@@ -17,6 +17,8 @@ $cf_shortcode     = get_field('acf-main__section8_form-code');
 $email            = get_field('acf-main__section8_email');
 $fb_image         = get_field('acf-main__section8_facebook_image');
 $fb_link          = get_field('acf-main__section8_facebook_link');
+$inst_image       = get_field('acf-main__section8_instegram_image');
+$inst_link        = get_field('acf-main__section8_instegram_link');
 
 
 ?>
@@ -60,15 +62,26 @@ $fb_link          = get_field('acf-main__section8_facebook_link');
       </div> 
     <?php endif ;?>
 
+    <div class="section8__social_container">
 
-    <?php if ( $fb_image ): ?>
-      <div class="section8__facebook"> 
-        <a href="<?php echo $fb_link;?>" target="_blank">
-            <img src="<?php echo $fb_image ?>" />
-        </a>    
-      </div> 
-    <?php endif ;?>
+            <?php if ( $fb_image ): ?>
+              <div class="section8__facebook"> 
+                <a href="<?php echo $fb_link;?>" target="_blank">
+                    <img src="<?php echo $fb_image ?>" />
+                </a>    
+              </div> 
+            <?php endif ;?>
+            
+        
+            <?php if ( $inst_image ): ?>
+              <div class="section8__instegram"> 
+                <a href="<?php echo $inst_link;?>" target="_blank">
+                    <img src="<?php echo $inst_image ?>" />
+                </a>    
+              </div> 
+            <?php endif ;?>
 
+    </div>
     
     
  

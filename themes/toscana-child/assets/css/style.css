@@ -187,6 +187,26 @@ p {
 }
 
 
+
+.header-bottom-inst {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+
+.header-bottom-facebook {
+    display: inline-block;
+}
+
+
+.widget-header {
+    display: block;
+    text-align: left;
+}
+
+
 /* -- ***** Menu 
  ---------------------------------------------------------------*/ 
 
@@ -979,7 +999,16 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 .section8__facebook {
     position: absolute;
     top: 85%;
-    right: 50%;
+    right: 51%;
+    width: 2vw;
+    margin-right: -1vw;
+}
+
+
+.section8__instegram {
+    position: absolute;
+    top: 85%;
+    right: 48%;
     width: 2vw;
     margin-right: -1vw;
 }
@@ -1519,9 +1548,9 @@ body:not(.home).single-post .entry-post .entry-meta  {
     
     
     .header-bottom-facebook {
-        float: left;
+    
         margin-left: 30px;
-    }        
+    }       
     
     .mobile-menu-container .mobile-widget-header .header-bottom-text {
         display: none;
@@ -1529,9 +1558,9 @@ body:not(.home).single-post .entry-post .entry-meta  {
     
     
     .mobile-menu-container .mobile-widget-header .header-bottom-beit-hatfutsot-logo {
-        float: right;
-        top: -28px;
-        right: 10px;
+        float: none;
+        top: auto;
+        right: -54px;
         position: relative;
     }
     
@@ -2090,9 +2119,26 @@ body:not(.home).single-post .entry-post .entry-meta  {
         font-size: 28px;
     }
     
+    
+    .section8__social_container {
+        position: relative;
+        text-align: center;
+    }
         
     .section8__facebook {
         position: relative;
+        display: inline-block;
+        top: auto;
+        right: auto;
+        width: auto;
+        margin: 30px auto 0 15px;
+        text-align: center;
+    }
+    
+    
+    .section8__instegram {
+        position: relative;
+        display: inline-block;
         top: auto;
         right: auto;
         width: auto;
