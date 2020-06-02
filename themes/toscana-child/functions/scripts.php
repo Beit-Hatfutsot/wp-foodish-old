@@ -1,7 +1,7 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-define ('HTMLINE_VERSION', '1.1');
+define ('HTMLINE_VERSION', '1.1.1');
 
 
 function register_scripts() {

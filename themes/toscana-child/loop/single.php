@@ -38,16 +38,6 @@ if ( have_posts() ) :
 						<?php pojo_link_pages(); ?>
 					<?php endif; ?>
                     
-                	<div class="entry-format">
-    					<?php if ( has_post_thumbnail() ) :
-    						$image_args = array( 'width' => '1170', 'height' => '660' );
-    						$image_url = Pojo_Thumbnails::get_post_thumbnail_url( $image_args );
-    						if ( $image_url ) : ?>
-    							<img src="<?php echo $image_url; ?>" alt="<?php echo esc_attr( get_the_title() ); ?>" class="media-object" />
-    						<?php endif; ?>
-    					<?php endif; ?>
-                    </div>
-                    
 					<?php $tags = get_the_tags(); if ( $tags ) : ?><div class="entry-tags"><?php the_tags( '', ' ' ); ?></div><?php endif; ?>
 
 					<?php
