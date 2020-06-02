@@ -28,3 +28,9 @@ Initial release
 
 1. Menu - close automatically  
 2. ActiveTrail integration  
+
+### 1.1.1  
+
+* Released: June 2, 2020  
+
+1. Single template file - remove featured image  
