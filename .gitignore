@@ -1,3 +1,6 @@
+/cache/
 /uploads/
 /upgrade/
+/wp-rocket-config/
+/advanced-cache.php
 /index.php
