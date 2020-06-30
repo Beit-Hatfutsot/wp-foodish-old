@@ -1335,6 +1335,11 @@ body:not(.home).single-post .entry-post .entry-meta  {
 	position: relative;
 	text-align: center;
 }
+
+.page-template-page-template-newsletter .pojo-form .columns .field-group,
+.page-template-page-template-newsletter .pojo-form .columns .form-actions {
+	float: left;
+}
 	
 .page-template-page-template-newsletter .section8__facebook {
 	position: relative;
