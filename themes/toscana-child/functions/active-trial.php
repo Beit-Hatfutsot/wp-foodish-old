@@ -15,9 +15,7 @@ define('AT_ENDPOINT_ACCOUNT_BALANCE',		'/api/account/balance');
 define('AT_ENDPOINT_GET_CONTACT_FIELDS',	'/api/account/contactFields');
 
 define('APP_TOKEN_ID',                  	'0X0E7F823F0009A10C709FAF058B144967FBED305CAF5E0E52CD2071388FC93D571283BED12745BA6D496AE7850EAC155F');
-define('AT_GROUP_ID' ,                  	'381104');
-
-
+define( 'AT_GROUP_ID',						( function_exists( 'pll_the_languages' ) && 'en' == pll_current_language() ? '382335' : '381104' ) );
 
 
 /**
