@@ -11,6 +11,9 @@ require_once('functions/polylang.php');
 // Scripts loading
 require_once('functions/scripts.php');
 
+// Post Types
+require_once('functions/post-types.php');
+
 // SEO
 require_once('functions/seo.php');
 

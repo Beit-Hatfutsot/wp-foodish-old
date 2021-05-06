@@ -21,6 +21,7 @@ var $ = jQuery,
 
 			HTMLine_starter_general.mainMenu();
 			HTMLine_starter_general.mainMenuMobile();
+			HTMLine_starter_general.initArticlesSlider();
 
 		},
 
@@ -69,6 +70,63 @@ var $ = jQuery,
             });
 
 		},
+        /**
+		 * initArticlesSlider
+		 *
+		 * @param	N/A
+		 * @return	N/A
+		 */
+		initArticlesSlider : function() {
+		          
+                  
+            $(window).on('load resize orientationchange', function() {
+                $('.section4__posts-container').each(function(){
+                    var $carousel = $(this);
+                    /* Initializes a slick carousel only on mobile screens */
+                    // slick on mobile
+                    if ($(window).width() > 768) {
+                        if ($carousel.hasClass('slick-initialized')) {
+                            $carousel.slick('unslick');
+                        }
+                    }
+                    else{
+                        if (!$carousel.hasClass('slick-initialized')) {
+                            $carousel.slick({
+
+                                responsive: [
+                                
+                                                    {
+                                                        breakpoint: 768,
+                                                        settings: {
+                                                                    slidesToShow: 2,
+                                                                    slidesToScroll: 1,
+                                                                    arrows: false,
+                                                                    centerMode: true,                                                                                                
+                                                                    centerPadding: '40px',
+                                                                    mobileFirst: true,
+                                                                  }
+                                                    },
+                                                    
+                                                    {
+                                                        breakpoint: 420,
+                                                        settings: {
+                                                                    slidesToShow: 1,
+                                                                    slidesToScroll: 1,
+                                                                    arrows: false,
+                                                                    centerMode: true,                                                                                                
+                                                                    mobileFirst: true,
+                                                                  }
+                                                    },
+                                            ],
+                            });
+                        }
+                    }
+                });
+            
+            }); // Window.on
+     
+		},
+
 
 		/**
 		 * loaded

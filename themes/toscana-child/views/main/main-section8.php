@@ -21,6 +21,12 @@ $inst_image       = get_field('acf-main__section8_instegram_image');
 $inst_link        = get_field('acf-main__section8_instegram_link');
 
 
+$foodish_logo   = get_field( 'acf-main__section8_foodish-logo');
+$bh_logo        = get_field( 'acf-main__section8_bh-logo');
+$button_text    = get_field( 'acf-main__section8_button-text');
+$button_url     = get_field( 'acf-main__section8_button-url');
+
+
 ?>
 <?php if ( $background_color ): ?>
 <style>
@@ -31,7 +37,27 @@ $inst_link        = get_field('acf-main__section8_instegram_link');
 <?php endif;?>
 
 <section id="section8" class="elementor-menu-anchor">
+    
+   <?php if ( $foodish_logo ): ?> 
+       <div class="section8__foodish-logo hidden-xs">
+            <img src="<?php echo  $foodish_logo;?>" alt="Foodish"/>
+       </div> 
+   <?php endif; ?>
 
+
+   <?php if ( $bh_logo ): ?> 
+       <div class="section8__bh-logo hidden-xs">
+            <a href="https://www.anumuseum.org.il/<?php echo pll_current_language(); ?>" target="_blank"><img src="<?php echo $bh_logo;?>" alt="ANU - Museum of the Jewish People"/></a>
+       </div> 
+   <?php endif; ?>
+   
+   
+   <?php if ( $button_text AND $button_url ): ?>
+        <div class="section8__event__button">
+            <a class="button" href="<?php echo $button_url?>" target="_blank"><?php echo $button_text?><span></span></a>     
+        </div>
+   <?php endif; ?>
+    
    <div class="section8__text-container">
    
      <?php if ( $title ): ?>
@@ -83,6 +109,24 @@ $inst_link        = get_field('acf-main__section8_instegram_link');
 
     </div>
     
+   
+   <?php if ( $foodish_logo OR $bh_logo ): ?> 
+   <div class="section8__footer_logos">
+        
+       <?php if ( $foodish_logo ): ?> 
+           <div class="section8__foodish-logo-mobile visible-xs">
+                <img src="<?php echo  $foodish_logo;?>" alt="Foodish"/>
+           </div> 
+       <?php endif; ?>
     
+    
+       <?php if ( $bh_logo ): ?> 
+           <div class="section8__bh-logo-mobile visible-xs">
+			   <a href="https://www.anumuseum.org.il/<?php echo pll_current_language(); ?>" target="_blank"><img src="<?php echo $bh_logo;?>" alt="ANU - Museum of the Jewish People"/></a>
+           </div> 
+       <?php endif; ?>
+       
+   </div>
+   <?php endif; ?>?
  
 </section>

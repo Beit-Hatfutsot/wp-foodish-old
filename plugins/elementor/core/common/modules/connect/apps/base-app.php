@@ -1,7 +1,9 @@
 <?php
 namespace Elementor\Core\Common\Modules\Connect\Apps;
 
+use Elementor\Core\Admin\Admin_Notices;
 use Elementor\Core\Common\Modules\Connect\Admin;
+use Elementor\Plugin;
 use Elementor\Tracker;
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -71,7 +73,18 @@ abstract class Base_App {
 		} else {
 			echo 'Not Connected';
 		}
+
+		echo '<hr>';
+
+		$this->print_app_info();
+
+		if ( current_user_can( 'manage_options' ) ) {
+			printf( '<div><a href="%s">%s</a></div>', $this->get_admin_url( 'reset' ), __( 'Reset Data', 'elementor' ) );
+		}
+
+		echo '<hr>';
 	}
+
 
 	/**
 	 * @since 2.3.0
@@ -126,6 +139,17 @@ abstract class Base_App {
 		$this->set_request_state();
 
 		$this->redirect_to_remote_authorize_url();
+	}
+
+	public function action_reset() {
+		delete_user_option( get_current_user_id(), 'elementor_connect_common_data' );
+
+		if ( current_user_can( 'manage_options' ) ) {
+			delete_option( 'elementor_connect_site_key' );
+			delete_option( 'elementor_remote_info_library' );
+		}
+
+		$this->redirect_to_admin_page();
 	}
 
 	/**
@@ -204,7 +228,12 @@ abstract class Base_App {
 			'nonce' => wp_create_nonce( $this->get_slug() . $action ),
 		] + $params;
 
-		return add_query_arg( $params, Admin::$url );
+		// Encode base url, the encode is limited to 64 chars.
+		$admin_url = \Requests_IDNAEncoder::encode( get_admin_url() );
+
+		$admin_url .= 'admin.php?page=' . Admin::PAGE_ID;
+
+		return add_query_arg( $params, $admin_url );
 	}
 
 	/**
@@ -357,7 +386,7 @@ abstract class Base_App {
 			$body = (object) $body;
 
 			$message = isset( $body->message ) ? $body->message : wp_remote_retrieve_response_message( $response );
-			$code = isset( $body->code ) ? $body->code : $response_code;
+			$code = (int) ( isset( $body->code ) ? $body->code : $response_code );
 
 			if ( 401 === $code ) {
 				$this->delete();
@@ -540,14 +569,42 @@ abstract class Base_App {
 				}
 				break;
 			default:
-				echo '<div id="message" class="updated notice is-dismissible"><p>';
+				/**
+				 * @var Admin_Notices $admin_notices
+				 */
+				$admin_notices = Plugin::$instance->admin->get_component( 'admin-notices' );
 
 				foreach ( $notices as $notice ) {
-					echo wp_kses_post( sprintf( '<div class="%s"><p>%s</p></div>', $notice['type'], wpautop( $notice['content'] ) ) );
-				}
+					$options = [
+						'description' => wp_kses_post( wpautop( $notice['content'] ) ),
+						'type' => $notice['type'],
+						'icon' => false,
+					];
 
-				echo '</p><button type="button" class="notice-dismiss"><span class="screen-reader-text">' . __( 'Dismiss', 'elementor' ) . '</span></button></div>';
+					$admin_notices->print_admin_notice( $options );
+				}
 		}
+	}
+
+	protected function get_app_info() {
+		return [];
+	}
+
+	protected function print_app_info() {
+		$app_info = $this->get_app_info();
+
+		foreach ( $app_info as $key => $item ) {
+			if ( $item['value'] ) {
+				$status = 'Exist';
+				$color = 'green';
+			} else {
+				$status = 'Empty';
+				$color = 'red';
+			}
+
+			printf( '%s: <strong style="color:%s">%s</strong><br>', $item['label'], $color, $status );
+		}
+
 	}
 
 	/**

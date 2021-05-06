@@ -25,7 +25,7 @@
  
 ---------------------------------------------------------------*/ 
 
-/*@import url('https://fonts.googleapis.com/css?family=Arimo:400,700&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css?family=Heebo:400,700&display=swap');*/
 
 
 @font-face {
@@ -59,16 +59,16 @@
 }
 
 
-
+/*
 @font-face {
-  font-family: 'Arimo';
+  font-family: 'Heebo';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Arimo Regular'), local('Arimo-Regular'), url(https://fonts.gstatic.com/s/arimo/v13/P5sMzZCDf9_T_10bxCF8jA.woff2) format('woff2');
+  src: local('Heebo Regular'), local('Heebo-Regular'), url(https://fonts.gstatic.com/s/Heebo/v13/P5sMzZCDf9_T_10bxCF8jA.woff2) format('woff2');
   unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
 }
-
+*/
 
 
 /* -- Global Elements */
@@ -87,14 +87,14 @@ h4,
 h5,
 h6,
 p {
-	font-family: 'Arimo', 'TGPraktikal-Regular', sans-serif !important;  
+	font-family: 'Heebo', 'TGPraktikal-Regular', sans-serif !important;  
 }
 
 
 .bold-eng-font,
 .bold-eng-font .elementor-heading-title,
 .bold-eng-font p  {
-	font-family: 'Arimo', 'TGPraktikal-Bold', sans-serif !important;
+	font-family: 'Heebo', 'TGPraktikal-Bold', sans-serif !important;
 }
 
 
@@ -134,7 +134,7 @@ p {
 
 
 .pll-en-us .header-bottom-beit-hatfutsot-logo {
-	margin-top: 15px;
+	margin-top: 50px;
 	margin-bottom: 15px;
 }
 
@@ -228,8 +228,9 @@ p {
 
 .sf-menu li a {
 	position: relative;
-	font-family: 'Arimo', 'TGPraktikal-Bold', sans-serif;
-	font-size: calc( 16px + (24 - 16) * (100vw - 768px) / (1920 - 768) ) !important;
+	font-family: 'Heebo', 'TGPraktikal-Bold', sans-serif;
+	font-size: calc( 16px + (18 - 16) * (100vw - 768px) / (1920 - 768) ) !important;
+    font-weight: bold;
 }
 
 body.home .sf-menu li.active a:not(:hover), 
@@ -243,6 +244,29 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 }
 
 
+
+.sf-menu li.lang-item a{
+    position: relative;
+}
+
+.sf-menu li.lang-item a:before {
+    content: '';
+    display: inline-block;
+    background: url("/wp-content/themes/toscana-child/assets/images/globe.svg") no-repeat;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-left: 16px;
+}
+
+
+.pll-en-us .sf-menu li.lang-item a:before {
+    margin-left: 0 !important;
+    margin-right: 15px;
+}
+
+
+/*
 .sf-menu li a:before {
 	content: '';
 	display: block;
@@ -253,7 +277,7 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 	position: absolute;
 	top: 50%;
 }
-
+*/
 
 
 /* -- ***** Widget Area 
@@ -277,12 +301,19 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 	font-size: calc( 16px + (24 - 16) * (100vw - 768px) / (1920 - 768) );
 	line-height: 1.2em;
 	font-weight: bold;
-	margin-bottom: 12px;
+    margin: 30px 0 12px;
 }
 
 
 .header-bottom-text p {
 	margin-bottom: 0;
+}
+
+
+
+.header-ticket-button a.button {
+    background-color: #000;
+    color: #fff;
 }
 
 
@@ -315,21 +346,72 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 ---------------------------------------------------------------*/ 
 
 
-.section1__bh-logo {
-	position: absolute;
-	top: 25%;
-	left: 50%;
-	width: 13vw;
-	margin-left: -6.5vw;
-	z-index: 5;
+.pll-en-us .section1__bh-logo img {
+    top: 66.5%;
+    left: 50%;
+    margin-left: -5.0vw;
+    width: 11vw;
 }
 
-.section1__foodish-logo img {
+.pll-en-us .section1__button {
+    top: 74.5%;
+}
+
+
+.section1__main-title {
 	position: absolute;
 	top: 40%;
 	left: 50%;
 	width: 25vw;
-	margin-left: -12.5vw;
+	margin-left: -12.5vw;    
+    
+    color: #ffffff;
+    font-family: Heebo;
+    font-size: 3.64vw;
+    font-weight: 700;
+    line-height: 1.075em;
+    text-align: center;
+    
+}
+
+
+.section1__button {
+    position: absolute;
+    top: 64.5%;
+    left: 50%;
+    width: 23vw;
+    margin-left: -11.5vw;
+    z-index: 5;   
+}
+
+
+.section1__button a.button {
+    display: block;
+    background: #2814FF;
+    color: #ffffff;
+    font-family: Heebo;
+    font-size: 1.3vw;
+    font-weight: 500;
+    line-height: 1em;
+    padding: 7.2% 0;
+}
+
+.section1__bh-logo img {
+	position: absolute;
+	top: 56.5%;
+	left: 50%;
+	margin-left: -3vw;
+	z-index: 5;
+    width: 4.84375vw;
+    text-align: center;
+}
+
+.section1__foodish-logo img {
+	position: absolute;
+	top: 31%;
+	left: 50%;
+	width: 8.3vw;
+	margin-left: -4.5vw;
 }
 
 .section1__pepper {
@@ -377,7 +459,7 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 	line-height: 1.4vw;
 	color: #fff;
 	font-weight: bold;
-	font-family: 'Arimo', 'TGPraktikal-Bold', sans-serif !important;
+	font-family: 'Heebo', 'TGPraktikal-Bold', sans-serif !important;
 } 
 
 	
@@ -389,19 +471,34 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 
 .language-switcher {
   position: absolute;
-  top: 5.7%;
+  top: 4%;
   right: 2.76%;
   z-index: 5;
 }
 
 .language-switcher a {
-  color: #FCF239;
+  color: #FFF;
   font-size: 24px;
   line-height: 1.38em;
   z-index: 5;
-  border-bottom: 2px solid #FCF239;
+  /*border-bottom: 2px solid #FCF239;*/
 }
 
+.language-switcher a:before {
+    content: '';
+    display: inline-block;
+    background: url(/wp-content/themes/toscana-child/assets/images/globe.svg) no-repeat;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    margin-left: 16px;   
+}
+
+
+.pll-en-us .language-switcher a:before {
+    margin-left: 0;  
+    margin-right: 16px;  
+}
 
 /* -> eng */
 
@@ -476,7 +573,7 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 	font-weight: bold;
 	font-size: 3.2vw;
 	line-height: 1em;
-	font-family: 'Arimo', 'TGPraktikal-Bold', sans-serif !important;
+	font-family: 'Heebo', 'TGPraktikal-Bold', sans-serif !important;
 	z-index: 1;
 	color: #000;
 	margin: 0 0 5% 0;
@@ -513,7 +610,7 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 
 
 .section3__leaves img {
-   width: 28vw; 
+    width: 37.18vw; 
 }
 
 
@@ -531,6 +628,13 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 
 
 
+.pll-en-us .section3__book {
+    top: -9%;
+    right: 0;
+}
+
+
+
 .section3__text-container {
 	position: absolute;
 	left: 21%;
@@ -543,9 +647,9 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 	font-weight: bold;
 	font-size: 3.2vw;
 	line-height: 1em;
-	font-family: 'Arimo', 'TGPraktikal-Bold', sans-serif !important;
+	font-family: 'Heebo', 'TGPraktikal-Bold', sans-serif !important;
 	z-index: 1;
-	color: #000;
+	color: #2814FF;
 	margin: 0 0 5% 0;
 }
 
@@ -565,7 +669,8 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 
 #section4 {
 	position: relative;
-	padding-top: 56.25%;
+	padding-top: 83.25%; /*56.25%;*/
+    background-color: #2814FF;
 }
 
 
@@ -588,7 +693,7 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 	position: absolute;
 	right: 9%;
 	top: 37%;
-	width: 33vw;
+	width: 24vw;
 }
 
 
@@ -596,7 +701,7 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 	font-weight: bold;
 	font-size: 3.2vw;
 	line-height: 1em;
-	font-family: 'Arimo', 'TGPraktikal-Bold', sans-serif !important;
+	font-family: 'Heebo', 'TGPraktikal-Bold', sans-serif !important;
 	z-index: 1;
 	color: #FFF;
 	margin: 0 0 5% 0;
@@ -614,7 +719,50 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 } 
 
 
+.section4__posts-container {
+    position: absolute;
+    top: 12.03%;
+    left: 18.5%;
+    width: 43.75vw;
+}
 
+
+.section4__posts-container .grid-item {
+    float: left !important;
+}
+
+
+.section4__posts-container .grid-item .pull-left {
+    max-width: 100%;
+}
+
+
+.section4__posts-container .grid-item.grid-two .caption {
+    padding: 10px !important;
+    background: #000 !important;
+    height: 6vw;
+}
+
+
+.section4__posts-container .grid-item .entry-meta > span,
+.section4__posts-container .grid-item .entry-meta > span time {
+    color: #fff;
+    font-size: 0.5208333333333333vw;
+    line-height: 2em;
+}
+ 
+ 
+.section4__posts-container .grid-item .grid-heading.entry-title {
+    color: #fff;
+    font-size: 0.8333333333333334vw;
+    margin: 0;
+    line-height: 1.1em;
+} 
+
+
+.section4__posts-container .grid-item .inbox {
+    max-width: 250px;
+}
 
 /* -- ***** 5th Section 
 ---------------------------------------------------------------*/
@@ -640,9 +788,9 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 	font-weight: normal;
 	font-size: 2.5vw;
 	line-height: 1em;
-	font-family: 'Arimo', 'TGPraktikal-Bold', sans-serif !important;
+	font-family: 'Heebo', 'TGPraktikal-Bold', sans-serif !important;
 	z-index: 1;
-	color: #4618ce;
+	color: #000;
 	margin: 0 0 5% 0;
 	
 }
@@ -687,23 +835,25 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 
 .section5__button_container {
 	position: absolute;
-	bottom: 5.20%;
+	bottom: 9.20%;
 	right: 5.62%;
 	z-index: 5; 
 }
 
 .section5__button_container a.button {
-	color: #4618ce;
-	border: 0.156vw solid #4618ce;
+	background-color: #2814FF;
+    color: #fff;
+	border: 0.156vw solid #2814FF;
 	font-weight: bold;
 	font-size: 1.5vw;
 	padding: 0.521vw 2.031vw;
+    font-family: 'Heebo';
 } 
 
 
 
 .section5__button_container a.button:hover {
-	background: #fff638;
+	background: #2814FF;
 }
 
 
@@ -728,6 +878,7 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 	top: -25%;
 	left: 14.5%;
 	z-index: 5;
+    pointer-events: none;
 }
 
 
@@ -739,17 +890,18 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 
 .section6__text-container {
 	position: absolute;
-	right: 0%;      
-	top: 28%;
+	left: 24.6%;      
+    z-index: 9;
+    top: 6%;
 	width: 33vw;
 }
 
 
 .section6__title {
 	font-weight: bold;
-	font-size: 3.2vw;
+	font-size: 2.5vw;
 	line-height: 1em;
-	font-family: 'Arimo', 'TGPraktikal-Bold', sans-serif !important;
+	font-family: 'Heebo', 'TGPraktikal-Bold', sans-serif !important;
 	z-index: 1;
 	color: #FFF;
 	margin: 0 0 5% 0;
@@ -768,7 +920,71 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 
 
 
- 
+.section6__event {
+    position: absolute;
+    left: 54.77%;
+    top: 26%;
+    line-height: normal;
+}
+
+
+.section6__event__main-date {
+    color: #fff;
+}
+
+
+.hl-seperator {
+    width: 70px;
+    height: 2px;
+    margin: 20px 0;
+}
+
+.hl-seperator.green {
+    background: #39FC79;
+}
+
+
+.section6__event__main-date .section6__event__main-date-date {
+    font-size: 2vw;
+    font-weight: 400;
+}
+
+
+.section6__event__main-date .section6__event__main-date-time { 
+    font-size: 1.2vw;
+}
+
+
+.section6__event__main-content {
+    color: #fff;
+    font-size: 1.5vw;
+}
+
+
+
+.section6__event__meta {
+    color: #fff;
+    font-size: 0.8vw;
+}
+
+
+.section6__event__meta .section6__event__meta-when span,
+.section6__event__meta .section6__event__meta-where span {
+    text-decoration: underline;
+    font-weight: bold;
+}  
+
+
+.section6__event__button a.button {
+    background: #000;
+    color: #fff;
+    font-family: 'Heebo';
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 0.521vw 2.031vw;
+    margin-top: 1.2vw;
+}
+
  
  /* -- ***** 7th Section 
 ---------------------------------------------------------------*/
@@ -807,7 +1023,7 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 	font-weight: bold;
 	font-size: 3.2vw;
 	line-height: 1em;
-	font-family: 'Arimo', 'TGPraktikal-Bold', sans-serif !important;
+	font-family: 'Heebo', 'TGPraktikal-Bold', sans-serif !important;
 	z-index: 1;
 	color: #000;
 	margin: 0 0 5% 0;
@@ -870,50 +1086,50 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 
 
 .contact-form-yellow-section input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #4618CE;
+  color: #2814FF;
   font-size: 0.938vw;
   font-weight: bold;
   text-align: left;
 }
 .contact-form-yellow-section input::-moz-placeholder { /* Firefox 19+ */
-  color: #4618CE;
+  color: #2814FF;
   font-size: 0.938vw;
   font-weight: bold;
   text-align: left;
 }
 .contact-form-yellow-section input:-ms-input-placeholder { /* IE 10+ */
-  color: #4618CE;
+  color: #2814FF;
   font-size: 0.938vw;
   font-weight: bold;
   text-align: left;
 }
 .contact-form-yellow-section input:-moz-placeholder { /* Firefox 18- */
-  color: #4618CE;
+  color: #2814FF;
   font-size: 0.938vw;
   font-weight: bold;
   text-align: left;
 }
 
 .contact-form-yellow-section textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: #4618CE;
+  color: #2814FF;
   font-size: 0.938vw;
   font-weight: bold;
   text-align: left;
 }
 .contact-form-yellow-section textarea::-moz-placeholder { /* Firefox 19+ */
-  color: #4618CE;
+  color: #2814FF;
   font-size: 0.938vw;
   font-weight: bold;
   text-align: left;
 }
 .contact-form-yellow-section textarea:-ms-input-placeholder { /* IE 10+ */
-  color: #4618CE;
+  color: #2814FF;
   font-size: 0.938vw;
   font-weight: bold;
   text-align: left;
 }
 .contact-form-yellow-section textarea:-moz-placeholder { /* Firefox 18- */
-  color: #4618CE;
+  color: #2814FF;
   font-size: 0.938vw;
   font-weight: bold;
   text-align: left;
@@ -948,7 +1164,7 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 	font-weight: bold;
 	font-size: 1.458vw;
 	line-height: 1em;
-	font-family: 'Arimo', 'TGPraktikal-Bold', sans-serif !important;
+	font-family: 'Heebo', 'TGPraktikal-Bold', sans-serif !important;
 	z-index: 1;
 	color: #FFF;
 	margin: 0 0 5% 0;
@@ -966,12 +1182,35 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 
 
 
+.section8__event__button {
+    position: absolute;
+    top: 19%;    
+}
 
+
+.section8__event__button a {
+    background: #2814FF;
+    color: #fff;
+    font-family: 'Heebo';
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 0.521vw 2.031vw;   
+}
+
+
+.section8__event__button {
+    right: 4.68%;
+}
+
+
+.section8__foodish-logo img {
+    left: 4.68%;
+}
 
 
 .contact-form-newsletter-section {
 	position: absolute;
-	top: 47.82%;
+	top: 15.82%;
 	right: 50%;
 	margin-right: -13vw;
 	width: 26vw;
@@ -981,7 +1220,7 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 
 .section8__email {
 	position: absolute;
-	top: 71.7%;
+	top: 38.7%;
 	right: 50%;
 	margin-right: -13vw;
 	width: 26vw;
@@ -1013,6 +1252,25 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 	margin-right: -1vw;
 }
 
+
+
+
+.section8__foodish-logo img {
+    position: absolute;
+    top: 20%;
+    width: 10vw;
+}
+
+
+.section8__bh-logo img {
+    position: absolute;
+    top: 82%;
+    right: 4.68%;
+    width: 10vw;
+}
+
+
+
 .contact-form-newsletter-section
  .pojo-form {
 	padding-bottom: 0;
@@ -1021,17 +1279,17 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 
 
 .contact-form-newsletter-section button {
-	background: transparent;
+	background: #fff;
 	border: none;
-	color: #fff;
+    border-radius: 50%;
+	color: #000;
 	width: 3.25vw;
-	height: 3.85vw;
-	line-height: 3.85vw;
-	padding: 0;
-	
+	height: 3.25vw;
+	line-height: 3.25vw;
+	padding: 0;	
 	position: absolute;
-	top:0;
-	right: 10px;
+	top:0.4vh;
+	right: 14px;
 	font-size: 1.5vw;
 	margin:0;
 }
@@ -1060,7 +1318,6 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
   font-weight: bold;
   text-align: left;
 }
-
 
 
 
@@ -1267,7 +1524,7 @@ body:not(.home).single-post .page-title h1 {
 
 body:not(.home).single-post .entry-post .entry-meta > span {
 	color: #4618ce;
-	font-family: 'Arimo', sans-serif !important;
+	font-family: 'Heebo', sans-serif !important;
 	font-weight: normal;
 	font-size: 14px;
 	font-style: normal;
@@ -1462,9 +1719,6 @@ body:not(.home).single-post .entry-post .entry-meta  {
 		margin-bottom: 1.5vw;
 	}
 	
-   .pll-en-us .section3__book {
-	top:28%;
-  }  
   
   .pll-en-us .section3__book img {
 	width: 35vw
@@ -1560,8 +1814,7 @@ body:not(.home).single-post .entry-post .entry-meta  {
 							 Homepage
  
 ****************************************************************/  
-
-
+    
 	#primary #content #main { 
 		margin: 0 !important;
 	}
@@ -1592,7 +1845,7 @@ body:not(.home).single-post .entry-post .entry-meta  {
 	  z-index: 1;
 	  top: 0;
 	  left: 0;
-	  background-color: #8F8F8F;
+	  background-color: #2814FF;
 	  overflow-x: hidden;
 	  transition: 0.5s;
 	  padding-top: 60px;
@@ -1666,6 +1919,11 @@ body:not(.home).single-post .entry-post .entry-meta  {
 		right: -54px;
 		position: relative;
 	}
+    
+    
+    .pll-en-us  .mobile-menu-container .mobile-widget-header .header-bottom-beit-hatfutsot-logo {
+		right: -30px;
+	}
 	
 	
 	.mobile-menu-container .mobile-widget-header .header-bottom-beit-hatfutsot-logo a {
@@ -1677,6 +1935,11 @@ body:not(.home).single-post .entry-post .entry-meta  {
 		width: 105px;
 	}
 	
+    
+    .mobile-menu li.lang-item {
+        display: none;
+    }
+    
   
 /****************************************************************
  
@@ -1697,22 +1960,54 @@ body:not(.home).single-post .entry-post .entry-meta  {
 		background-position: 48% !important;
 	}      
 	
+    
+    .pll-en-us .section1__bh-logo img {
+        top: 79.5%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 37vw;
+    }
+    
+    .section1__button {
+        display: none;
+    }
+    
+    
+    .section1__main-title {
+        position: absolute;
+        top: 46.917%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 100vw;
+        color: #ffffff;
+        font-family: Heebo;
+        font-size: 11.20vw;
+        line-height: 1.075em;
+        text-align: center;    
+    }
+    
+    
+    .pll-en-us .section1__main-title {
+        font-size: 8.20vw;
+    }
 	
-	.section1__bh-logo {
-		position: absolute;
-		top: 36px;
-		left: 50%;
-		width: 110px;
-		margin-left: -55px;
-	}
+    
+    .section1__bh-logo img {
+        top: 77.5%;
+        left: 50%;
+        margin-left: -13vw;
+        z-index: 5;
+        width: 25.84375vw;
+        text-align: center;
+        min-width: 91px;
+    }
 	
 	.section1__foodish-logo img {
-		position: absolute;
-		top: 40.1%;
-		left: 50%;
-		width: 260px;
-		margin-left: -138px;
-		z-index: 5;
+        width: 25.333333333333336vw;
+        margin-left: -11vw;
+        z-index: 5;
 	}
 	
 	.section1__pepper {
@@ -1773,6 +2068,7 @@ body:not(.home).single-post .entry-post .entry-meta  {
 	#section2 {
 		position: relative;
 		padding-top: 0 !important;
+        overflow-x: hidden;
 	}
 
 
@@ -1808,8 +2104,7 @@ body:not(.home).single-post .entry-post .entry-meta  {
 	}
 	
 	.section2__phone img {
-		width: auto !important;
-		max-width: 400px;
+        width: 456px;
 	}
 	
 	.section2__beetsweb img {
@@ -1820,9 +2115,21 @@ body:not(.home).single-post .entry-post .entry-meta  {
 	
 	.section2__phone {
 		top: auto;
-		bottom: 51px;
-		left: -39px;
+        right: 0;
+        bottom: 14%;
+        left: -17%;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 445px;
 	} 
+    
+    
+    .section2__beetsweb-mobile {
+        height: 811px;
+        width: 100%;
+        background: url(/wp-content/themes/toscana-child/assets/images/beetsweb-mobile.png) no-repeat;
+        background-position: 40% 0;
+    }
 	
 
 /* -- ***** 3rd Section 
@@ -1832,6 +2139,7 @@ body:not(.home).single-post .entry-post .entry-meta  {
 		position: relative;
 		padding-top: 0 !important;
 		margin-top: -64px;
+        overflow: hidden;
 	}
 	
    
@@ -1858,18 +2166,31 @@ body:not(.home).single-post .entry-post .entry-meta  {
 	}
 	
 	
-	.section3__leaves-mobile {
-		position: relative;
-		left: -66px;
-		top: -75px;
-		z-index: 3;
-	}
+    .section3__leaves-mobile {
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        text-align: center;
+        top: 7px;
+        width: 150%;
+        margin-right: 0;
+        margin-left: -25%;
+        z-index: 2 !important;
+        position: relative;
+    }
+    
+    
+    section#section3:after {
+        content: '';
+        background: blue;
+        width: 100%;
+        height: 200px;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+    }
 
-
-   .section3__leaves-mobile img {
-		width: 258px;
-	}
-	
 	
    .section3__book {
 		position: absolute;
@@ -1885,15 +2206,14 @@ body:not(.home).single-post .entry-post .entry-meta  {
 		width: 359px;
    }
    
-
-
+   
 /* -- ***** 4th Section 
 ---------------------------------------------------------------*/
 
 	#section4 {
 		position: relative;
 		padding-top: 0 !important;
-		margin-top: -128px;
+		/*margin-top: -128px;*/
 		
 		background-size: cover !important;
 		background-attachment: fixed;
@@ -1930,6 +2250,41 @@ body:not(.home).single-post .entry-post .entry-meta  {
 	.section4__people img {
 		width: 360px;
 	}
+    
+    
+    .section4__posts-container {
+        position: relative;
+        left: auto !important;
+        right:auto !important;
+        top: auto !important;
+        width: 100%;
+        padding: 60px 0;
+    }
+     
+    
+    .section4__posts-container .grid-item {
+        /*width: auto !important;
+        float: none !important;*/
+    }
+    
+    
+    .section4__posts-container .grid-item .inbox {
+       /* width: 250px;*/
+    }    
+    
+    .section4__posts-container .grid-item .grid-heading.entry-title {
+        font-size: 16px;/*2.2vw;*/
+    }
+    
+    
+    .section4__posts-container .grid-item .entry-meta > span, 
+    .section4__posts-container .grid-item .entry-meta > span time {
+        font-size: 11px; /*1.85vw*/
+    }
+    
+    .section4__posts-container .grid-item.grid-two .caption {
+        height: 8.97vh;
+    }    
 	
 	
 /* -- ***** 5th Section 
@@ -1993,13 +2348,13 @@ body:not(.home).single-post .entry-post .entry-meta  {
 	}
 	
 	.section5__button_container a.button {
-		color: #4618ce;
+		color: #FFF;
 		border: none;
 		font-weight: bold;
 		font-size: 18px;
 		padding: 25px;
 		display: block;
-		background: #fcf239;
+		background: #2814FF;
 		margin-bottom: 30px;
 	}
 
@@ -2015,8 +2370,10 @@ body:not(.home).single-post .entry-post .entry-meta  {
 		
 		background-size: cover !important;
 		background-attachment: fixed;
-		
-		overflow: hidden;
+		margin-top: 160px;
+        padding-bottom: 100px;
+        
+		/*overflow: hidden;*/
 	 } 
    
    
@@ -2033,7 +2390,7 @@ body:not(.home).single-post .entry-post .entry-meta  {
 		top: auto;
 		width: auto;
 		
-		padding: 50px 30px 50px;
+		padding: 160px 30px 20px;
 		
 	}
 	
@@ -2058,6 +2415,50 @@ body:not(.home).single-post .entry-post .entry-meta  {
 	.section6__apron-mobile img {
 		width: 256px;
 	}
+    
+    
+    .section6__band {
+        position: absolute;
+        top: -110px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-width: 50%;
+        min-width: 300px;
+    }
+    
+    
+    .section6__event {
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        padding: 0 30px;
+    }
+    
+    
+    .section6__event__main-content {
+       font-size: 4.8VW;
+   }
+   
+   
+   .section6__event__main-date .section6__event__main-date-date {
+        font-size: 18px;
+   }
+   
+   
+   .section6__event__main-date .section6__event__main-date-time {
+        font-size: 15px;
+   }
+ 
+   .section6__event__meta {
+        font-size: 16px;
+    }
+    
+    
+    .section6__event__button a.button {
+        font-size: 17px;
+        margin-top: 26px;
+    }
 	
  
 /* -- ***** 7th Section 
@@ -2127,6 +2528,7 @@ body:not(.home).single-post .entry-post .entry-meta  {
 	
 	.contact-form-yellow-section button {
 		font-size:24px !important;
+        padding: 15px 0;
 	}
 
 
@@ -2205,8 +2607,8 @@ body:not(.home).single-post .entry-post .entry-meta  {
 		top: auto;
 		right: auto;
 		left: auto;
-		margin: 0 auto;
-		width: 315px;
+		margin: 30px auto 0;
+        width: calc( 100% - 30px);
 	}
 	
 	.section8__email {
@@ -2265,14 +2667,65 @@ body:not(.home).single-post .entry-post .entry-meta  {
 		line-height: 50px;
 		padding: 0;
 		position: absolute;
-		top: -59px;
-		right: 4px;
+        top: -64px;
+        right: 8px;
 		font-size: 29px !important;
 	}
 	
 	.contact-form-newsletter-section .error button {
 		top: -82px;
 	}
+    
+    
+    
+    .section8__event__button a {
+        font-size: 18px;
+        padding: 14px 30px 10px;
+        display: inline-block;
+        margin: 0 auto;
+    }
+    
+    
+    
+    .section8__event__button {
+        position: absolute;
+        top: -23px;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+    
+    
+    
+    .section8__footer_logos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        
+        margin-top: 50px;
+    }
+    
+    
+    .section8__foodish-logo-mobile,
+    .section8__bh-logo-mobile {
+        padding: 0 30px;
+        text-align: center;
+    }
+    
+    
+    .section8__foodish-logo-mobile img {
+        width: 230px;
+    }
+    
+    
+    .section8__bh-logo-mobile img {
+        width: 230px;
+    }
+    
+    
  
 } /*767*/
 
@@ -2300,14 +2753,14 @@ body:not(.home).single-post .entry-post .entry-meta  {
  
  .section2__phone {
 	right: 0;
-	bottom: -18px;
+	bottom: 14%;
 	left: -124px;
 	margin: 0 auto;
 	text-align: center;
  }
  
  .section2__phone img {
-	width: 360px !important;
+	width: 445px !important;
  }
  
  
@@ -2315,17 +2768,17 @@ body:not(.home).single-post .entry-post .entry-meta  {
 ---------------------------------------------------------------*/
 	
 	.section3__leaves-mobile {
-		right: 0;
-		left: 0;
-		margin: 0 auto;
-		text-align: center;
-		z-index: 1;
-		top: -16px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        text-align: center;
+        z-index: 1;
+        top: 7px;
+        width: 150%;
+        margin-right: 0;
+        margin-left: -25%;
 	}
 	
-	.section3__leaves-mobile img {
-	   width: 258px;
-	}
 	
 	.section3__book {
 		right: 0;
@@ -2378,6 +2831,51 @@ body:not(.home).single-post .entry-post .entry-meta  {
 		-moz-box-ordinal-group: 2;
 		box-ordinal-group: 2;
 	}
+    
+
+/* 4th Section */
+
+    .section4__posts-container .grid-item.grid-two .caption {
+        height: 8.97vh;
+        min-height: 130px;
+    }    
+	
+    
 	
 }/* 465 */
 
+
+
+
+
+@media (max-width: 499px) {
+      
+/****************************************************************
+ 
+----------------------------- Pages ----------------------------
+							 
+							 Homepage
+ 
+****************************************************************/  
+
+
+/* -- ***** First Section 
+---------------------------------------------------------------*/ 
+ 
+    .section1__bh-logo img {
+        top: 66.5%;
+    }
+    
+    
+    .pll-en-us .section1__bh-logo img {
+        top: 69.5%;
+    }
+    
+    
+    .pll-en-us .section1__foodish-logo img, 
+	.section1__foodish-logo img {
+        top: 37%;
+	}
+    
+
+} /* 499 */

@@ -13,9 +13,15 @@ $main_background   = get_field('acf-main__section1_background');
 $bh_logo           = get_field('acf-main__section1_bh-logo');
 $foodish_logo      = get_field('acf-main__section1_foodish-logo');
 $pepper_image      = get_field('acf-main__section1_floating-elem');
+$text_main_title   = get_field('acf-main__section1_main-title');
 $text_top_right    = get_field('acf-main__section1_text-top-right');
 $text_bottom_right = get_field('acf-main__section1_text-bottom-right');
 $text_bottom_left  = get_field('acf-main__section1_text-bottom-left');
+
+$button_text = get_field('acf-main__section1_button-text');
+$button_link = get_field('acf-main__section1_button-url');
+$button_link_url     = isset($button_link['url'])    ? $button_link['url'] : '#';
+$button_link_target  = isset($button_link['target']) ? $button_link['target'] : '_self';
 
 ?>
 <?php if ( $main_background ): ?>
@@ -34,7 +40,7 @@ $text_bottom_left  = get_field('acf-main__section1_text-bottom-left');
 
 <section id="section1" class="elementor-menu-anchor">
 
-<div class="language-switcher"><?php echo do_shortcode('[polylang_langswitcher]'); ?></div>
+<div class="language-switcher visible-xs"><?php echo do_shortcode('[polylang_langswitcher]'); ?></div>
 
 
     <?php if ( $bh_logo ): ?>
@@ -49,11 +55,26 @@ $text_bottom_left  = get_field('acf-main__section1_text-bottom-left');
        </figure> 
     <?php endif ;?>
     
+    <?php if ( $text_main_title ): ?>
+       <figure class="section1__main-title"> 
+            <?php echo $text_main_title; ?>
+       </figure> 
+    <?php endif ;?>
+    
     <?php if ( $pepper_image ): ?>
        <figure class="section1__pepper"> 
             <img src="<?php echo $pepper_image?>"/>
        </figure> 
-    <?php endif ;?>
+    <?php endif ;?>    
+
+
+    <?php if ( $button_text ): ?>
+       <figure class="section1__button"> 
+            <a href="<?php echo $button_link_url; ?>" target="<?php echo $button_link_target;?>" class="button">
+                <?php echo $button_text; ?>
+            </a>
+       </figure> 
+    <?php endif ;?>        
     
     <?php if ( $text_top_right ): ?>
        <div class="section1__text-top-right section1-side-texts"> 
@@ -96,10 +117,6 @@ $text_bottom_left  = get_field('acf-main__section1_text-bottom-left');
     
 <?php endif;?>  
     
-      <figure class="section1__pepper-mobile visible-xs"> 
-            <?php $pepper_image_mobile = get_bloginfo('stylesheet_directory') . '/assets/images/pepper-mobile.png'; ?>
-            <img src="<?php echo $pepper_image_mobile; ?>"/>
-       </figure> 
-    
+   
     
 </section>

@@ -48,11 +48,17 @@ $text             = get_field('acf-main__section2_text');
    </div>
    
    <?php if ( $beetsweb ): ?>
-       <figure class="section2__beetsweb"> 
+       <figure class="section2__beetsweb hidden-xs"> 
             <img src="<?php echo $beetsweb?>"/>
        </figure> 
    <?php endif ;?>
    
+   
+   <figure class="section2__beetsweb-mobile visible-xs"> 
+        <?php $beetsweb_image_mobile = get_bloginfo('stylesheet_directory') . '/assets/images/beetsweb-mobile.png'; ?>
+        <div class="beetsweb-image" style="background: url(<?php echo $beetsweb_image_mobile; ?>) no-repeat;"></div>
+   </figure> 
+
  
    <?php if ( $phone ): ?>
        <figure class="section2__phone"> 

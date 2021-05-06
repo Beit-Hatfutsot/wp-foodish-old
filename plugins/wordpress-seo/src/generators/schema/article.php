@@ -1,9 +1,4 @@
 <?php
-/**
- * WPSEO plugin file.
- *
- * @package Yoast\WP\SEO\Generators\Schema
- */
 
 namespace Yoast\WP\SEO\Generators\Schema;
 
@@ -24,11 +19,17 @@ class Article extends Abstract_Schema_Piece {
 			return false;
 		}
 
+		// If we cannot output a publisher, we shouldn't output an Article.
 		if ( $this->context->site_represents === false ) {
 			return false;
 		}
 
-		if ( $this->helpers->schema->article->is_article_post_type( $this->context->indexable->object_sub_type ) ) {
+		// If we cannot output an author, we shouldn't output an Article.
+		if ( ! $this->helpers->schema->article->is_author_supported( $this->context->indexable->object_sub_type ) ) {
+			return false;
+		}
+
+		if ( $this->context->schema_article_type !== 'None' ) {
 			$this->context->main_schema_id = $this->context->canonical . Schema_IDs::ARTICLE_HASH;
 
 			return true;
@@ -43,18 +44,20 @@ class Article extends Abstract_Schema_Piece {
 	 * @return array $data Article data.
 	 */
 	public function generate() {
-		$comment_count = \get_comment_count( $this->context->id );
-		$data          = [
-			'@type'            => 'Article',
+		$data = [
+			'@type'            => $this->context->schema_article_type,
 			'@id'              => $this->context->canonical . Schema_IDs::ARTICLE_HASH,
 			'isPartOf'         => [ '@id' => $this->context->canonical . Schema_IDs::WEBPAGE_HASH ],
 			'author'           => [ '@id' => $this->helpers->schema->id->get_user_schema_id( $this->context->post->post_author, $this->context ) ],
 			'headline'         => $this->helpers->schema->html->smart_strip_tags( $this->helpers->post->get_post_title_with_fallback( $this->context->id ) ),
 			'datePublished'    => $this->helpers->date->format( $this->context->post->post_date_gmt ),
 			'dateModified'     => $this->helpers->date->format( $this->context->post->post_modified_gmt ),
-			'commentCount'     => $comment_count['approved'],
 			'mainEntityOfPage' => [ '@id' => $this->context->canonical . Schema_IDs::WEBPAGE_HASH ],
 		];
+
+		if ( $this->context->post->comment_status === 'open' ) {
+			$data['commentCount'] = intval( $this->context->post->comment_count, 10 );
+		}
 
 		if ( $this->context->site_represents_reference ) {
 			$data['publisher'] = $this->context->site_represents_reference;
@@ -125,8 +128,7 @@ class Article extends Abstract_Schema_Piece {
 		}
 
 		$callback = function( $term ) {
-			// We are checking against the WordPress internal translation.
-			// @codingStandardsIgnoreLine
+			// We are using the WordPress internal translation.
 			return $term->name !== \__( 'Uncategorized', 'default' );
 		};
 		$terms    = \array_filter( $terms, $callback );
@@ -135,7 +137,7 @@ class Article extends Abstract_Schema_Piece {
 			return $data;
 		}
 
-		$data[ $key ] = \implode( ',', \wp_list_pluck( $terms, 'name' ) );
+		$data[ $key ] = \wp_list_pluck( $terms, 'name' );
 
 		return $data;
 	}

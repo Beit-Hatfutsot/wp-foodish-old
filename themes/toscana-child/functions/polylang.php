@@ -8,6 +8,22 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 
+function your_prefix_after_setup_theme() {
+
+   // register our translatable strings - again first check if function exists.
+
+    if ( function_exists( 'pll_register_string' ) ) {
+
+        pll_register_string( 'htmline-custom-strings', 'at'     , 'pojo' );
+        pll_register_string( 'htmline-custom-strings', 'When'   , 'pojo' );
+        pll_register_string( 'htmline-custom-strings', 'Where'  , 'pojo' );
+
+    }
+}
+ add_action( 'after_setup_theme', 'your_prefix_after_setup_theme' );
+ 
+ 
+
 
 /**
  * Polylang Shortcode - https://wordpress.org/plugins/polylang/

@@ -14,6 +14,8 @@ $title          = get_field('acf-main__section5_text_title');
 $text           = get_field('acf-main__section5_text');
 $button_text    = get_field('acf-main__section5__button-text');
 $button_link    = get_field('acf-main__section5__button-link');
+$image_above_button = get_field('acf-main__section5_foodish-image_above-button-mobile');
+
 
 if( $button_link ) { 
     $link_url = $button_link['url'];
@@ -65,6 +67,12 @@ if( $button_link ) {
   
  ?>
  
+   <?php if ( $image_above_button ): ?>
+       <figure class="section5__children visible-xs"> 
+            <img src="<?php echo $image_above_button; ?>"/>
+       </figure> 
+   <?php endif; ?>
+
    <?php if ( $button_text ): ?>
       <div class="section5__button_container">
         <a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $button_text ); ?><span><?php echo $arrow;?></span></a>

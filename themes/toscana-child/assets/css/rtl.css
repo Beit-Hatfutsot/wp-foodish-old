@@ -164,7 +164,20 @@
 
 
 
+.section4__posts-container {
+    left:auto;
+    right: 18.5%;
+}
 
+
+.slick-slider {
+    direction: ltr;
+}
+
+
+.section4__posts-container .grid-item {
+    float: right !important;
+}
 
 /* -- ***** 5th Section 
 ---------------------------------------------------------------*/
@@ -212,11 +225,19 @@
 
 
 .section6__text-container {
-    top: 37%;
-    left: 9%;
-    right: auto;
+    top: 11.85%;
+    left: auto;
+    right: 24.6%;
+    left: auto;
+    z-index: 9;
 }
 
+
+.section6__event {
+ 	position: absolute;
+	left: 29.77%;      
+	top: 25%;   
+}
 
 
 
@@ -270,9 +291,71 @@
 
 
 
+/* -- ***** Newsletter
+---------------------------------------------------------------*/
+
+
+
+
+.section8__foodish-logo img {
+    left: auto;
+    right: 4.68%;
+}
+
+
+.section8__bh-logo img {
+    right: auto;
+    left: 4.68%;   
+    width: 6vw; 
+}
+
+
+.section8__event__button {
+    right: auto;
+    left: 4.68%; 
+}
+
+
+.contact-form-newsletter-section button {
+    right: auto;
+    left: 10px;
+}
+
+
+
+
+.contact-form-newsletter-section  input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  text-align: right;
+}
+
+
+.contact-form-newsletter-section button {
+    right: auto;
+    left: 15px;
+    transform: scale(-1);
+}
+
+
+
 /**************/
 /* Responsive */
 /**************/
+
+
+
+@media (max-width: 1199px) and (min-width: 768px) {
+	
+/* -- ***** 3th Section 
+---------------------------------------------------------------*/
+	
+    
+    .section3__text-container {
+        top: 12%;
+    }    
+    
+    
+}
+
 
 
 @media (max-width: 767px) {
@@ -326,7 +409,12 @@
   }
   
     .section2__phone {
-        right: -39px;
+        right: 0;
+        bottom: 14%;
+        left: -17%;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 445px;
     }
     
 
@@ -353,12 +441,17 @@
         right: auto;
     }
     
+    
     .section3__leaves-mobile {
-        left: -66px;
-        text-align: left;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        text-align: center;
+        z-index: 1;
+        top: 7px;
+        width: 150%;
+        margin-right: -25%;
     }
-
-
 
 
 /* -- ***** 4th Section 
@@ -383,6 +476,16 @@
     }    
 
 
+    .section4__posts-container {
+        left:auto;
+        right: 18.5%;
+    }
+
+
+    .section4__posts-container .grid-item .inbox {
+        text-align: right;
+    }
+    
   
 /* -- ***** 5th Section 
 ---------------------------------------------------------------*/    
@@ -441,13 +544,11 @@
     }
     
     .section5__button_container a.button {
-        color: #4618ce;
         border: none;
         font-weight: bold;
         font-size: 18px;
         padding: 25px;
         display: block;
-        background: #fcf239;
         margin-bottom: 30px;
     }
 
@@ -465,7 +566,7 @@
         top: auto;
         width: auto;
         
-        padding: 50px 30px 50px;
+        padding: 160px 30px 20px;
         
     }
     
@@ -536,6 +637,12 @@
     .contact-form-newsletter-section button {
         top: 4px;
     }
+    
+    
+    .section8__event__button {
+        right: 0;
+        left: 0; 
+    }
        
 
 } /*767*/
@@ -549,7 +656,7 @@
 @media (max-width: 767px) and (min-width: 550px) {
     
     .section2__phone {
-        right: -124px;
+        right: 18%;
         left: 0;
     }
     
@@ -561,12 +668,11 @@
         margin: 0 auto;
         text-align: center;
         z-index: 1;
-        top: -16px;
+        top: 7px;
+        width: 150%;
+        margin-right: -25%;
     }
     
-    .section3__leaves-mobile img {
-       width: 258px;
-    }
     
     .section3__book {
         right: 0;

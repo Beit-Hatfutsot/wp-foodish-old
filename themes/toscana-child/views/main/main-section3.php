@@ -60,10 +60,10 @@ $text             = get_field('acf-main__section3_text');
    
    
 
-      <figure class="section3__leaves-mobile visible-xs"> 
-            <?php $leaves_image_mobile = get_bloginfo('stylesheet_directory') . '/assets/images/leaves-mobile-eng.png'; ?>
-            <img src="<?php echo $leaves_image_mobile; ?>"/>
-       </figure> 
+  <figure class="section3__leaves-mobile visible-xs"> 
+        <?php $leaves_image_mobile = get_bloginfo('stylesheet_directory') . '/assets/images/plate.png'; ?>
+        <img src="<?php echo $leaves_image_mobile; ?>"/>
+   </figure> 
 
  
   

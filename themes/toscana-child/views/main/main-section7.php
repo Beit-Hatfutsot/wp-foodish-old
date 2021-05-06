@@ -20,7 +20,7 @@ $cf_shortcode     = get_field('acf-main__section7_form-code');
 <?php if ( $main_background ): ?>
 <style>
     #section7 {
-        background-color: #fff43f;
+        background-color: #fff;
         background-image: url(<?php echo $main_background;?>);
         background-position: center center;
         background-repeat: no-repeat;

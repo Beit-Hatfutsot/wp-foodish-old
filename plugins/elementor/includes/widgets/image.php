@@ -5,7 +5,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-use Elementor\Core\Schemes;
+use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
+use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
 
 /**
  * Elementor image widget.
@@ -93,10 +94,10 @@ class Widget_Image extends Widget_Base {
 	 *
 	 * Adds different input fields to allow the user to change and customize the widget settings.
 	 *
-	 * @since 1.0.0
+	 * @since 3.1.0
 	 * @access protected
 	 */
-	protected function _register_controls() {
+	protected function register_controls() {
 		$this->start_controls_section(
 			'section_image',
 			[
@@ -278,7 +279,7 @@ class Widget_Image extends Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-image img' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} img' => 'width: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -313,7 +314,59 @@ class Widget_Image extends Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-image img' => 'max-width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} img' => 'max-width: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'height',
+			[
+				'label' => __( 'Height', 'elementor' ),
+				'type' => Controls_Manager::SLIDER,
+				'default' => [
+					'unit' => 'px',
+				],
+				'tablet_default' => [
+					'unit' => 'px',
+				],
+				'mobile_default' => [
+					'unit' => 'px',
+				],
+				'size_units' => [ 'px', 'vh' ],
+				'range' => [
+					'px' => [
+						'min' => 1,
+						'max' => 500,
+					],
+					'vh' => [
+						'min' => 1,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} img' => 'height: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'object-fit',
+			[
+				'label' => __( 'Object Fit', 'elementor' ),
+				'type' => Controls_Manager::SELECT,
+				'condition' => [
+					'height[size]!' => '',
+				],
+				'options' => [
+					'' => __( 'Default', 'elementor' ),
+					'fill' => __( 'Fill', 'elementor' ),
+					'cover' => __( 'Cover', 'elementor' ),
+					'contain' => __( 'Contain', 'elementor' ),
+				],
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} img' => 'object-fit: {{VALUE}};',
 				],
 			]
 		);
@@ -347,7 +400,7 @@ class Widget_Image extends Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-image img' => 'opacity: {{SIZE}};',
+					'{{WRAPPER}} img' => 'opacity: {{SIZE}};',
 				],
 			]
 		);
@@ -356,7 +409,7 @@ class Widget_Image extends Widget_Base {
 			Group_Control_Css_Filter::get_type(),
 			[
 				'name' => 'css_filters',
-				'selector' => '{{WRAPPER}} .elementor-image img',
+				'selector' => '{{WRAPPER}} img',
 			]
 		);
 
@@ -381,7 +434,7 @@ class Widget_Image extends Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-image:hover img' => 'opacity: {{SIZE}};',
+					'{{WRAPPER}}:hover img' => 'opacity: {{SIZE}};',
 				],
 			]
 		);
@@ -390,7 +443,7 @@ class Widget_Image extends Widget_Base {
 			Group_Control_Css_Filter::get_type(),
 			[
 				'name' => 'css_filters_hover',
-				'selector' => '{{WRAPPER}} .elementor-image:hover img',
+				'selector' => '{{WRAPPER}}:hover img',
 			]
 		);
 
@@ -406,7 +459,7 @@ class Widget_Image extends Widget_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-image img' => 'transition-duration: {{SIZE}}s',
+					'{{WRAPPER}} img' => 'transition-duration: {{SIZE}}s',
 				],
 			]
 		);
@@ -427,7 +480,7 @@ class Widget_Image extends Widget_Base {
 			Group_Control_Border::get_type(),
 			[
 				'name' => 'image_border',
-				'selector' => '{{WRAPPER}} .elementor-image img',
+				'selector' => '{{WRAPPER}} img',
 				'separator' => 'before',
 			]
 		);
@@ -439,7 +492,7 @@ class Widget_Image extends Widget_Base {
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-image img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -451,7 +504,7 @@ class Widget_Image extends Widget_Base {
 				'exclude' => [
 					'box_shadow_position',
 				],
-				'selector' => '{{WRAPPER}} .elementor-image img',
+				'selector' => '{{WRAPPER}} img',
 			]
 		);
 
@@ -507,9 +560,8 @@ class Widget_Image extends Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .widget-image-caption' => 'color: {{VALUE}};',
 				],
-				'scheme' => [
-					'type' => Schemes\Color::get_type(),
-					'value' => Schemes\Color::COLOR_3,
+				'global' => [
+					'default' => Global_Colors::COLOR_TEXT,
 				],
 			]
 		);
@@ -530,7 +582,9 @@ class Widget_Image extends Widget_Base {
 			[
 				'name' => 'caption_typography',
 				'selector' => '{{WRAPPER}} .widget-image-caption',
-				'scheme' => Schemes\Typography::TYPOGRAPHY_3,
+				'global' => [
+					'default' => Global_Typography::TYPOGRAPHY_TEXT,
+				],
 			]
 		);
 
@@ -614,13 +668,11 @@ class Widget_Image extends Widget_Base {
 			return;
 		}
 
-		$has_caption = $this->has_caption( $settings );
-
-		$this->add_render_attribute( 'wrapper', 'class', 'elementor-image' );
-
-		if ( ! empty( $settings['shape'] ) ) {
-			$this->add_render_attribute( 'wrapper', 'class', 'elementor-image-shape-' . $settings['shape'] );
+		if ( ! Plugin::$instance->experiments->is_feature_active( 'e_dom_optimization' ) ) {
+			$this->add_render_attribute( 'wrapper', 'class', 'elementor-image' );
 		}
+
+		$has_caption = $this->has_caption( $settings );
 
 		$link = $this->get_link_url( $settings );
 
@@ -637,7 +689,9 @@ class Widget_Image extends Widget_Base {
 				$this->add_lightbox_data_attributes( 'link', $settings['image']['id'], $settings['open_lightbox'] );
 			}
 		} ?>
-		<div <?php echo $this->get_render_attribute_string( 'wrapper' ); ?>>
+		<?php if ( ! Plugin::$instance->experiments->is_feature_active( 'e_dom_optimization' ) ) { ?>
+			<div <?php echo $this->get_render_attribute_string( 'wrapper' ); ?>>
+		<?php } ?>
 			<?php if ( $has_caption ) : ?>
 				<figure class="wp-caption">
 			<?php endif; ?>
@@ -654,7 +708,9 @@ class Widget_Image extends Widget_Base {
 			<?php if ( $has_caption ) : ?>
 				</figure>
 			<?php endif; ?>
-		</div>
+		<?php if ( ! Plugin::$instance->experiments->is_feature_active( 'e_dom_optimization' ) ) { ?>
+			</div>
+		<?php } ?>
 		<?php
 	}
 
@@ -723,7 +779,10 @@ class Widget_Image extends Widget_Base {
 				link_url = settings.image.url;
 			}
 
-			#><div class="elementor-image{{ settings.shape ? ' elementor-image-shape-' + settings.shape : '' }}"><#
+			<?php if ( ! Plugin::$instance->experiments->is_feature_active( 'e_dom_optimization' ) ) { ?>
+				#><div class="elementor-image{{ settings.shape ? ' elementor-image-shape-' + settings.shape : '' }}"><#
+			<?php } ?>
+
 			var imgClass = '';
 
 			if ( '' !== settings.hover_animation ) {
@@ -751,7 +810,10 @@ class Widget_Image extends Widget_Base {
 				#></figure><#
 			}
 
-			#></div><#
+			<?php if ( ! Plugin::$instance->experiments->is_feature_active( 'e_dom_optimization' ) ) { ?>
+				#></div><#
+			<?php } ?>
+
 		} #>
 		<?php
 	}

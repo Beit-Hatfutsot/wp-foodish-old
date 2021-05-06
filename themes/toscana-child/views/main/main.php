@@ -23,6 +23,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
     get_template_part( 'views/main/main','section6' );
     
     get_template_part( 'views/main/main','section7' );
-    
+   
     get_template_part( 'views/main/main','section8' );
 ?>

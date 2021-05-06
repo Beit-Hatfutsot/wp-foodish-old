@@ -54,4 +54,15 @@ $text             = get_field('acf-main__section4_text');
        </figure> 
     <?php endif ;?>
     
+    
+    <div class="section4__posts-container">
+        <?php
+   
+        	/**
+			* Display the posts grid
+			*/
+            include( locate_template( 'views/posts/grid.php' ) );
+        ?>
+    </div>
+    
 </section>
