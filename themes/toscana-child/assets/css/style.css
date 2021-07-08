@@ -1217,6 +1217,9 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 	z-index: 8;
 }
 
+.contact-form-newsletter-section .pojo-form .form-message {
+	color: #FFF !important;
+}
 
 .section8__email {
 	position: absolute;
@@ -1298,7 +1301,6 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 .contact-form-newsletter-section input {
   padding: 1.198vw !important;
   line-height: 1 !important;
-  text-align: left;
 } 
 
 
