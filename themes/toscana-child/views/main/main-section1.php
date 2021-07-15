@@ -18,10 +18,11 @@ $text_top_right    = get_field('acf-main__section1_text-top-right');
 $text_bottom_right = get_field('acf-main__section1_text-bottom-right');
 $text_bottom_left  = get_field('acf-main__section1_text-bottom-left');
 
-$button_text = get_field('acf-main__section1_button-text');
-$button_link = get_field('acf-main__section1_button-url');
-$button_link_url     = isset($button_link['url'])    ? $button_link['url'] : '#';
-$button_link_target  = isset($button_link['target']) ? $button_link['target'] : '_self';
+$button_text        = get_field('acf-main__section1_button-text');
+$button_extend_text = get_field('acf-main__section1_button-extend_text');
+$button_link        = get_field('acf-main__section1_button-url');
+$button_link_url    = isset($button_link['url'])    ? $button_link['url'] : '#';
+$button_link_target = isset($button_link['target']) ? $button_link['target'] : '_self';
 
 ?>
 <?php if ( $main_background ): ?>
@@ -74,6 +75,12 @@ $button_link_target  = isset($button_link['target']) ? $button_link['target'] : 
                 <?php echo $button_text; ?>
             </a>
        </figure> 
+    <?php endif ;?>        
+    
+    <?php if ( $button_extend_text ): ?>
+        <div class="section1__button-extend-text">
+            <?php echo $button_extend_text; ?>
+        </div>
     <?php endif ;?>        
     
     <?php if ( $text_top_right ): ?>

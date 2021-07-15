@@ -347,20 +347,20 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 
 
 .pll-en-us .section1__bh-logo img {
-    top: 66.5%;
+    top: 56.5%;
     left: 50%;
     margin-left: -5.0vw;
     width: 11vw;
 }
 
 .pll-en-us .section1__button {
-    top: 74.5%;
+    top: 64.5%;
 }
 
 
 .section1__main-title {
 	position: absolute;
-	top: 40%;
+	top: 34%;
 	left: 50%;
 	width: 25vw;
 	margin-left: -12.5vw;    
@@ -377,7 +377,7 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 
 .section1__button {
     position: absolute;
-    top: 64.5%;
+    top: 58.5%;
     left: 50%;
     width: 23vw;
     margin-left: -11.5vw;
@@ -396,9 +396,20 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
     padding: 7.2% 0;
 }
 
+.section1__button-extend-text {
+	position: absolute;
+	top: 70%;
+	left: 30%;
+	width: 40%;
+	line-height: normal;
+	font-size: 1.3vw;
+	color: #FFF;
+	text-align: center;
+}
+
 .section1__bh-logo img {
 	position: absolute;
-	top: 56.5%;
+	top: 50.5%;
 	left: 50%;
 	margin-left: -3vw;
 	z-index: 5;
@@ -408,7 +419,7 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 
 .section1__foodish-logo img {
 	position: absolute;
-	top: 31%;
+	top: 25%;
 	left: 50%;
 	width: 8.3vw;
 	margin-left: -4.5vw;
@@ -1963,55 +1974,6 @@ body:not(.home).single-post .entry-post .entry-meta  {
 	}      
 	
     
-    .pll-en-us .section1__bh-logo img {
-        top: 79.5%;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        width: 37vw;
-    }
-    
-    .section1__button {
-        display: none;
-    }
-    
-    
-    .section1__main-title {
-        position: absolute;
-        top: 46.917%;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        width: 100vw;
-        color: #ffffff;
-        font-family: Heebo;
-        font-size: 11.20vw;
-        line-height: 1.075em;
-        text-align: center;    
-    }
-    
-    
-    .pll-en-us .section1__main-title {
-        font-size: 8.20vw;
-    }
-	
-    
-    .section1__bh-logo img {
-        top: 77.5%;
-        left: 50%;
-        margin-left: -13vw;
-        z-index: 5;
-        width: 25.84375vw;
-        text-align: center;
-        min-width: 91px;
-    }
-	
-	.section1__foodish-logo img {
-        width: 25.333333333333336vw;
-        margin-left: -11vw;
-        z-index: 5;
-	}
-	
 	.section1__pepper {
 		display: none;
 	}
@@ -2062,8 +2024,46 @@ body:not(.home).single-post .entry-post .entry-meta  {
 	.section1__text-bottom-left {
 		bottom: 32px;
 	}
+
+	.section1__foodish-logo img {
+		margin-left: -32px;
+		width: 64px;
+	}
 	
-	
+	.section1__main-title {
+		margin: 0 auto;
+		left: 0;
+		width: 100%;
+		font-size: 30px;
+		text-align: center;
+	}
+
+	.section1__bh-logo img,
+	.pll-en-us .section1__bh-logo img {
+		margin-left: -42.5px;
+		top: 50%;
+		width: 85px;
+	}
+
+	.section1__button,
+	.pll-en-us .section1__button {
+		margin-left: -100px;
+		top: 57%;
+		width: 200px;
+	}
+
+	.section1__button a.button {
+		font-size: 12px;
+	}
+
+	.section1__button-extend-text {
+		top: 65%;
+		left: 15%;
+		width: 70%;
+		font-size: 12px;
+	}
+
+
 /* -- ***** 2nd Section 
 ---------------------------------------------------------------*/
 
@@ -2845,39 +2845,3 @@ body:not(.home).single-post .entry-post .entry-meta  {
     
 	
 }/* 465 */
-
-
-
-
-
-@media (max-width: 499px) {
-      
-/****************************************************************
- 
------------------------------ Pages ----------------------------
-							 
-							 Homepage
- 
-****************************************************************/  
-
-
-/* -- ***** First Section 
----------------------------------------------------------------*/ 
- 
-    .section1__bh-logo img {
-        top: 66.5%;
-    }
-    
-    
-    .pll-en-us .section1__bh-logo img {
-        top: 69.5%;
-    }
-    
-    
-    .pll-en-us .section1__foodish-logo img, 
-	.section1__foodish-logo img {
-        top: 37%;
-	}
-    
-
-} /* 499 */
