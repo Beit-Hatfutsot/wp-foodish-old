@@ -2026,8 +2026,8 @@ body:not(.home).single-post .entry-post .entry-meta  {
 	}
 
 	.section1__foodish-logo img {
-		margin-left: -32px;
-		width: 64px;
+		margin-left: -64px;
+		width: 128px;
 	}
 	
 	.section1__main-title {
