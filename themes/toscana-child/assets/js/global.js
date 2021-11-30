@@ -88,6 +88,9 @@ var $ = jQuery,
                         if ($carousel.hasClass('slick-initialized')) {
                             $carousel.slick('unslick');
                         }
+
+                        // resize section height according to posts container
+                        $('section#section4').height($('.section4__posts-container')+300);
                     }
                     else{
                         if (!$carousel.hasClass('slick-initialized')) {

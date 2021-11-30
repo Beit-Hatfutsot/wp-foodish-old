@@ -213,7 +213,8 @@ p {
 .menu-toggle {
 	width: 30px;
 	height: 30px;
-	background: url("/wp-content/themes/toscana-child/assets/images/menu-toggle.svg") no-repeat;
+	background: url("/wp-content/themes/toscana-child/assets/images/menu-toggle.svg") 50% 50% no-repeat;
+	background-size: 65%;
 	padding: 0 20px !important;
 	margin: 40px 0 0 27px;
 	cursor: pointer;
@@ -419,10 +420,10 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 
 .section1__foodish-logo img {
 	position: absolute;
-	top: 25%;
+	top: 22%;
 	left: 50%;
-	width: 8.3vw;
-	margin-left: -4.5vw;
+	width: 20vw;
+	margin-left: -10vw;
 }
 
 .section1__pepper {
@@ -750,14 +751,14 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 
 .section4__posts-container .grid-item.grid-two .caption {
     padding: 10px !important;
-    background: #000 !important;
+    background: #FFF !important;
     height: 6vw;
 }
 
 
 .section4__posts-container .grid-item .entry-meta > span,
 .section4__posts-container .grid-item .entry-meta > span time {
-    color: #fff;
+    color: #000;
     font-size: 0.5208333333333333vw;
     line-height: 2em;
 }

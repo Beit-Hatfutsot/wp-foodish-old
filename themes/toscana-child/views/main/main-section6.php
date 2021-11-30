@@ -4,16 +4,17 @@
  *
  * @author		Roy Hizkya
  * @package		page-templates
- * @version		1.0.0
+ * @version		1.1.4
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 
-$main_background = get_field('acf-main__section6_background');
-$apron           = get_field('acf-main__section6_apron-image');
-$title           = get_field('acf-main__section6_text_title');
+$main_background     = get_field('acf-main__section6_background');
+$apron               = get_field('acf-main__section6_apron-image');
+$title               = get_field('acf-main__section6_text_title');
 $event_purchase_text = get_field('acf-main__section6_events_button_text');
 $top_image_mobile    = get_field('acf-main__section6_mobile-top-image');
+$image_link          = get_field('acf-main__section6_image_link');
 
 
 ?>
@@ -32,8 +33,10 @@ $top_image_mobile    = get_field('acf-main__section6_mobile-top-image');
 <section id="section6" class="elementor-menu-anchor">
 
     <?php if ( $apron ): ?>
-       <figure class="section6__apron"> 
-            <img src="<?php echo $apron?>"/>
+       <figure class="section6__apron">
+            <?php echo $image_link ? '<a href="' . $image_link . '" target="_blank">' : ''; ?>
+                <img src="<?php echo $apron?>"/>
+            <?php echo $image_link ? '</a>' : ''; ?>
        </figure> 
     <?php endif ;?>
 
@@ -50,7 +53,9 @@ $top_image_mobile    = get_field('acf-main__section6_mobile-top-image');
    
    <?php if ( $top_image_mobile ): ?>
        <figure class="section6__band visible-xs"> 
-            <img src="<?php echo $top_image_mobile; ?>"/>
+            <?php echo $image_link ? '<a href="' . $image_link . '" target="_blank">' : ''; ?>
+                <img src="<?php echo $top_image_mobile; ?>"/>
+            <?php echo $image_link ? '</a>' : ''; ?>
        </figure> 
    <?php endif; ?>
    
@@ -136,7 +141,7 @@ $top_image_mobile    = get_field('acf-main__section6_mobile-top-image');
 <?php else: ?>
 
     <div class="section6__no-events">
-        <?php _e( 'Sorry, no results were found.', 'pojo' ) ?>
+        <?php //_e( 'Sorry, no results were found.', 'pojo' ) ?>
     </div>
 
 <?php  endif; ?>
