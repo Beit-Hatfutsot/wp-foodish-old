@@ -30,13 +30,11 @@ $image_link          = get_field('acf-main__section6_image_link');
 </style>    
 <?php endif;?>
 
-<section id="section6" class="elementor-menu-anchor">
+<section id="section6" class="elementor-menu-anchor" <?php echo ( $image_link ) ? 'style="cursor: pointer;" onclick="window.open(\'' . $image_link . '\', \'_blank\');"' : ''; ?>>
 
     <?php if ( $apron ): ?>
        <figure class="section6__apron">
-            <?php echo $image_link ? '<a href="' . $image_link . '" target="_blank">' : ''; ?>
-                <img src="<?php echo $apron?>"/>
-            <?php echo $image_link ? '</a>' : ''; ?>
+            <img src="<?php echo $apron?>" />
        </figure> 
     <?php endif ;?>
 
@@ -52,11 +50,9 @@ $image_link          = get_field('acf-main__section6_image_link');
    
    
    <?php if ( $top_image_mobile ): ?>
-       <figure class="section6__band visible-xs"> 
-            <?php echo $image_link ? '<a href="' . $image_link . '" target="_blank">' : ''; ?>
-                <img src="<?php echo $top_image_mobile; ?>"/>
-            <?php echo $image_link ? '</a>' : ''; ?>
-       </figure> 
+        <figure class="section6__band visible-xs"> 
+            <img src="<?php echo $top_image_mobile; ?>" />
+        </figure> 
    <?php endif; ?>
    
    

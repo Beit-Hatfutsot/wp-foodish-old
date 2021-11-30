@@ -213,7 +213,7 @@ p {
 .menu-toggle {
 	width: 30px;
 	height: 30px;
-	background: url("/wp-content/themes/toscana-child/assets/images/menu-toggle.svg") 50% 50% no-repeat;
+	background: #2814ff url("/wp-content/themes/toscana-child/assets/images/menu-toggle.svg") 50% 50% no-repeat;
 	background-size: 65%;
 	padding: 0 20px !important;
 	margin: 40px 0 0 27px;
@@ -681,7 +681,6 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 
 #section4 {
 	position: relative;
-	padding-top: 83.25%; /*56.25%;*/
     background-color: #2814FF;
 }
 
@@ -765,7 +764,7 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
  
  
 .section4__posts-container .grid-item .grid-heading.entry-title {
-    color: #fff;
+    color: #000;
     font-size: 0.8333333333333334vw;
     margin: 0;
     line-height: 1.1em;

@@ -90,7 +90,7 @@ var $ = jQuery,
                         }
 
                         // resize section height according to posts container
-                        $('section#section4').height($('.section4__posts-container')+300);
+                        $('section#section4').height($('.section4__posts-container').height()+300);
                     }
                     else{
                         if (!$carousel.hasClass('slick-initialized')) {
@@ -123,6 +123,9 @@ var $ = jQuery,
                                             ],
                             });
                         }
+
+                        // reset section height
+                        $('section#section4').css('height', 'auto');
                     }
                 });
             
