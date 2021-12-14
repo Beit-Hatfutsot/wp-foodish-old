@@ -17,6 +17,9 @@ $logo			= get_field( 'acf-main__section_lost_pastries_logo' );
 $title			= get_field( 'acf-main__section_lost_pastries_title' );
 $description	= get_field( 'acf-main__section_lost_pastries_description' );
 
+if ( ! $categories )
+	return;
+
 ?>
 
 <section id="section-lost-pastries" class="elementor-menu-anchor">

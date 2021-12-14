@@ -14,6 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 $title		= get_field( 'acf-main__section_bakery_gallery_title' );
 $gallery	= get_field( 'acf-main__section_lost_pastries_gallery' );
 
+if ( ! $gallery )
+	return;
+
 ?>
 
 <section id="section-bakery-gallery" class="elementor-menu-anchor">
