@@ -81,20 +81,20 @@ var $ = jQuery,
                   
             $(window).on('load resize orientationchange', function() {
                 $('.section4__posts-container').each(function(){
-                    var $carousel = $(this);
+                    var $carousel1 = $(this);
                     /* Initializes a slick carousel only on mobile screens */
                     // slick on mobile
-                    if ($(window).width() > 768) {
-                        if ($carousel.hasClass('slick-initialized')) {
-                            $carousel.slick('unslick');
+                    if ($(window).width() >= 768) {
+                        if ($carousel1.hasClass('slick-initialized')) {
+                            $carousel1.slick('unslick');
                         }
 
                         // resize section height according to posts container
                         $('section#section4').height($('.section4__posts-container').height()+300);
                     }
                     else{
-                        if (!$carousel.hasClass('slick-initialized')) {
-                            $carousel.slick({
+                        if (!$carousel1.hasClass('slick-initialized')) {
+                            $carousel1.slick({
 
                                 responsive: [
                                 
@@ -129,6 +129,65 @@ var $ = jQuery,
                     }
                 });
             
+                $('.section-lost-pastries__posts-container-wrap').each(function(){
+                    var $carousel2 = $(this);
+                    /* Initializes a slick carousel only on mobile screens */
+                    // slick on mobile
+                    if ($(window).width() >= 768) {
+                        if ($carousel2.hasClass('slick-initialized')) {
+                            $carousel2.slick('unslick');
+                        }
+                    }
+                    else{
+                        if (!$carousel2.hasClass('slick-initialized')) {
+                            $carousel2.slick({
+
+                                responsive: [
+                                
+                                                    {
+                                                        breakpoint: 768,
+                                                        settings: {
+                                                                    slidesToShow: 2,
+                                                                    slidesToScroll: 1,
+                                                                    arrows: false,
+                                                                    centerMode: true,                                                                                                
+                                                                    centerPadding: '40px',
+                                                                    mobileFirst: true,
+                                                                  }
+                                                    },
+                                                    
+                                                    {
+                                                        breakpoint: 420,
+                                                        settings: {
+                                                                    slidesToShow: 1,
+                                                                    slidesToScroll: 1,
+                                                                    arrows: false,
+                                                                    centerMode: true,                                                                                                
+                                                                    mobileFirst: true,
+                                                                  }
+                                                    },
+                                            ],
+                            });
+                        }
+                    }
+                });
+
+                $('.section-bakery-gallery__gallery-container-wrap').each(function(){
+                    var $carousel3 = $(this);
+
+                    if (!$carousel3.hasClass('slick-initialized')) {
+                        $carousel3.slick({
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: true,
+                            centerMode: true,                                                                                                
+                            mobileFirst: true,
+                        });
+                	}
+
+	                $carousel3.slick('slickGoTo', 1);
+                });
+
             }); // Window.on
      
 		},

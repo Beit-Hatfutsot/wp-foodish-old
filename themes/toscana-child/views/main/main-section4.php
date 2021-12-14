@@ -1,14 +1,15 @@
 <?php
 /**
- * Section 3
+ * Section 4
  *
  * @author		Roy Hizkya
  * @package		page-templates
- * @version		1.0.0
+ * @version		1.2.0
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 
+$categories       = get_field('acf-main__section4_categories');
 $main_background = get_field('acf-main__section4_background');
 $people           = get_field('acf-main__section4_people-image');
 $title            = get_field('acf-main__section4_text_title');

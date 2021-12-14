@@ -4,7 +4,7 @@
  *
  * @author		Roy Hizkya
  * @package		page-templates
- * @version		1.0.0
+ * @version		1.2.0
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 ?>
@@ -16,6 +16,10 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
     get_template_part( 'views/main/main','section3' );
    
+    get_template_part( 'views/main/main-section','lost-pastries');
+
+    get_template_part( 'views/main/main-section','bakery-gallery');
+
     get_template_part( 'views/main/main','section4' );
 
     get_template_part( 'views/main/main','section5' );

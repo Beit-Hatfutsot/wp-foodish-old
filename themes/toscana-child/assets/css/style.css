@@ -1332,7 +1332,150 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
   text-align: left;
 }
 
+/* -- ***** Lost Pastries Section 
+---------------------------------------------------------------*/
 
+#section-lost-pastries {
+	position: relative;
+	background-color: #EAE5D8;
+	background-image: url('../images/lost-pastries-bg-top01.png'), url('../images/lost-pastries-bg-top02.png'), url('../images/lost-pastries-bg-left.png'), url('../images/lost-pastries-bg-right.png');
+	background-repeat: repeat-x, no-repeat, no-repeat, no-repeat;
+}
+
+.section-lost-pastries__logo {
+	margin: 0 auto;
+}
+
+.section-lost-pastries__description {
+	margin-left: auto;
+	margin-right: auto;
+	color: #19468C;
+	text-align: center;
+}
+
+.section-lost-pastries__title {
+	font-weight: bold;
+	color: #19468C;
+	text-align: center;
+}
+
+.section-lost-pastries__posts-container-wrap {
+	overflow: hidden;
+}
+
+.section-lost-pastries__posts-container-wrap .grid-item {
+	float: left !important;
+}
+
+.section-lost-pastries__posts-container-wrap .grid-item .image-link {
+	max-width: 100%;
+}
+
+.section-lost-pastries__posts-container-wrap .grid-item .caption {
+	padding: 0;
+}
+
+.section-lost-pastries__posts-container-wrap .grid-item .caption .grid-heading {
+	margin: 25px 0 0;
+	line-height: 20px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #19468C;
+}
+
+.section-lost-pastries__posts-container-wrap .grid-item .caption .grid-subtitle {
+	margin: 0;
+	line-height: 20px;
+	font-size: 16px;
+	font-weight: normal;
+	color: #19468C;
+	text-decoration: underline;
+}
+
+.section-lost-pastries__posts-container-wrap .grid-item .caption .entry-excerpt {
+	margin-top: 25px;
+	line-height: 20px;
+	font-size: 16px;
+	color: #19468C;
+}
+
+/* -- ***** Bakery Gallery Section 
+---------------------------------------------------------------*/
+
+#section-bakery-gallery {
+	position: relative;
+	padding: 4.166666666666666vw 3.125vw;
+	background-color: #EAE5D8;
+	background-image: url('../images/bakery-gallery-bg-top.png'), url('../images/bakery-gallery-bg-bottom.png');
+	background-position: center top, center bottom;
+	background-size: 590px 114px, auto;
+	background-repeat: no-repeat, repeat-x;
+}
+
+.section-bakery-gallery__title {
+	font-weight: bold;
+	color: #19468C;
+	text-align: center;
+}
+
+.section-bakery-gallery__gallery-container {
+	margin: 0 auto;
+	max-width: 837px;
+}
+
+.section-bakery-gallery__gallery-container-wrap .slick-list {
+	padding: 0 !important;
+}
+
+.section-bakery-gallery__gallery-container-wrap .slick-arrow {
+	z-index: 1000;
+}
+
+.section-bakery-gallery__gallery-container-wrap .slick-arrow:before {
+	font-family: inherit;
+	font-size: 50px;
+	font-weight: normal;
+	opacity: 1;
+}
+
+.section-bakery-gallery__gallery-container-wrap .slick-prev {
+	left: calc(25% - 48px) !important;
+}
+
+.section-bakery-gallery__gallery-container-wrap .slick-next {
+	right: calc(25% - 72px) !important;
+}
+
+.section-bakery-gallery__gallery-container-wrap .image-container-wrap,
+.section-bakery-gallery__gallery-container-wrap .image-caption-wrap,
+.section-bakery-gallery__gallery-container-wrap .image-counter-wrap {
+	margin: 0 auto;
+	max-width: 392px;
+}
+
+.section-bakery-gallery__gallery-container-wrap .image-caption-wrap {
+	margin: 30px auto;
+	line-height: 20px;
+	font-size: 16px;
+	color: #19468C;
+	text-align: center;
+}
+
+.section-bakery-gallery__gallery-container-wrap .image-caption-wrap .image-title {
+	font-weight: bold;
+}
+
+.section-bakery-gallery__gallery-container-wrap .image-caption-wrap .image-caption {
+	text-decoration: underline;
+}
+
+.section-bakery-gallery__gallery-container-wrap .image-counter {
+	line-height: 50px;
+	font-size: 50px;
+	font-weight: 500;
+	color: #19468C;
+	text-align: center;
+}
 
 /****************************************************************
  
@@ -1688,7 +1831,15 @@ body:not(.home).single-post .entry-post .entry-meta  {
 } /* (min-width: 1200px) */
 
 
+@media (min-width: 992px) {
 
+	/* -- ***** Lost Pastries Section 
+	---------------------------------------------------------------*/
+
+	.section-lost-pastries__posts-container-wrap article:nth-child(3n+1) {
+		clear: both;
+	}
+}
 
 @media (max-width: 991px) and (min-width: 768px) {
 	
@@ -1696,9 +1847,12 @@ body:not(.home).single-post .entry-post .entry-meta  {
 		font-size: 24px !important;
 	}
 	
-	
- 
-	
+	/* -- ***** Lost Pastries Section 
+	---------------------------------------------------------------*/
+
+	.section-lost-pastries__posts-container-wrap article:nth-child(2n+1) {
+		clear: both;
+	}
 
 } /*  (max-width: 991px) and (min-width: 768px) */
 
@@ -1783,8 +1937,6 @@ body:not(.home).single-post .entry-post .entry-meta  {
 
 }
 
-
-
 @media (min-width: 768px) {
 
 /****************************************************************
@@ -1808,15 +1960,70 @@ body:not(.home).single-post .entry-post .entry-meta  {
 		overflow-y: auto;
 		height: 100%;
 	}
-   
-	
+
+	/* -- ***** Lost Pastries Section 
+	---------------------------------------------------------------*/
+
+	#section-lost-pastries {
+		padding: 4.166666666666666vw 3.125vw;
+		background-position: center top, center 4.166666666666666vw, 3.125vw 9.895833333333332vw, calc(100% - 3.125vw) 9.895833333333332vw;
+		background-size: auto, 6.822916666666666vw 4.270833333333333vw, 10.15625vw 20.729166666666668vw, 10.15625vw 20.729166666666668vw;
+	}
+
+	.section-lost-pastries__logo {
+		margin-top: 5.520833333333333vw;
+		width: 12.03125vw;
+		height: 12.03125vw;
+	}
+
+	.section-lost-pastries__description {
+		margin-top: 2.604166666666667vw;
+		max-width: 48.828125vw;
+		line-height: 2.4vw;
+		font-size: 1.4vw;
+	}
+
+	.section-lost-pastries__title {
+		margin: 2.604166666666667vw 0 2.34375vw;
+		line-height: 3.125vw;
+		font-size: 2.083333333333333vw;
+	}
+
+	.section-lost-pastries__posts-container {
+		padding: 0 16.927083333333336vw;
+	}
+
+	.section-lost-pastries__posts-container-wrap {
+		padding: 1.09375vw 6.875000000000001vw;
+		background-image: url('../images/lost-pastries-bg-grid-left.png'), url('../images/lost-pastries-bg-grid-right.png');
+		background-position: left top, right top;
+		background-size: 1.09375vw;
+		background-repeat: repeat-y;
+	}
+
+	/* -- ***** Bakery Gallery Section 
+	---------------------------------------------------------------*/
+
+	.section-bakery-gallery__title {
+		margin: calc(114px - 2.083333333333333vw) 0 4.53125vw;
+		line-height: 3.125vw;
+		font-size: 2.083333333333333vw;
+	}
+
+	.section-bakery-gallery__gallery-container {
+		background: url('../images/bakery-gallery-bg-sides.png') center center no-repeat;
+		background-size: 837px 125px;
+	}
+
+	.section-bakery-gallery__gallery-container-wrap .slick-arrow:before {
+		color: #19468C;
+	}
+
+	.section-bakery-gallery__gallery-container-wrap .image-counter {
+		margin: 0 auto;
+	}
 
 } /* (min-width: 768px) */
-
-
-
-
-
 
 @media (max-width: 767px) {
 
@@ -2727,11 +2934,64 @@ body:not(.home).single-post .entry-post .entry-meta  {
         width: 230px;
     }
     
-    
- 
+	/* -- ***** Lost Pastries Section 
+	---------------------------------------------------------------*/
+
+	#section-lost-pastries {
+		padding: 4.166666666666666vw 3.125vw;
+		background-position: center top, center 15.733333333333333vw, 2.666666666666667vw 23vw, calc(100% - 2.666666666666667vw) 23vw;
+		background-size: auto, 24.266666666666666vw 15.2vw, 31.2vw 63.733333333333334vw, 31.2vw 63.733333333333334vw;
+	}
+
+	.section-lost-pastries__logo {
+		margin-top: 31vw;
+		width: 43.2vw;
+		height: 43.2vw;
+	}
+
+	.section-lost-pastries__description {
+		margin-top: 24vw;
+		line-height: 8vw;
+		font-size: 4.8vw;
+	}
+
+	.section-lost-pastries__title {
+		margin: 10.666666666666668vw 0 6.4vw;
+		line-height: 16vw;
+		font-size: 10.666666666666668vw;
+	}
+
+	.section-lost-pastries__posts-container-wrap {
+		position: relative;
+		left: auto !important;
+		right: auto !important;
+		top: auto !important;
+		width: 100%;
+	}
+
+	.section-lost-pastries__posts-container-wrap .grid-item .inbox {
+		margin: 0 auto;
+		max-width: 250px;
+	}
+
+	/* -- ***** Bakery Gallery Section 
+	---------------------------------------------------------------*/
+
+	.section-bakery-gallery__title {
+		margin: calc(3.833333333333334vw + 114px) 0 6.4vw;
+		line-height: 16vw;
+		font-size: 10.666666666666668vw;
+	}
+
+	.section-bakery-gallery__gallery-container-wrap .slick-arrow:before {
+		color: #FFF;
+	}
+
+	.section-bakery-gallery__gallery-container-wrap .image-counter {
+		margin: 0 auto 40px;
+	}
+
 } /*767*/
-
-
 
 
 @media (max-width: 767px) and (min-width: 550px) {

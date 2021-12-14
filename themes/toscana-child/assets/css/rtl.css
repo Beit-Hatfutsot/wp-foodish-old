@@ -336,6 +336,25 @@
 }
 
 
+/* -- ***** Lost Pastries Section 
+---------------------------------------------------------------*/
+
+.section-lost-pastries__posts-container-wrap .grid-item {
+    float: right !important;
+}
+
+/* -- ***** Bakery Gallery Section 
+---------------------------------------------------------------*/
+
+.section-bakery-gallery__gallery-container-wrap .slick-prev {
+    left: auto !important;
+    right: calc(25% - 48px) !important;
+}
+
+.section-bakery-gallery__gallery-container-wrap .slick-next {
+    left: calc(25% - 72px) !important;
+    right: auto !important;
+}
 
 /**************/
 /* Responsive */
@@ -644,6 +663,12 @@
         left: 0; 
     }
        
+    /* -- ***** Lost Pastries Section 
+    ---------------------------------------------------------------*/
+
+    .section-lost-pastries__posts-container-wrap .grid-item .caption {
+        text-align: right;
+    }
 
 } /*767*/
 
