@@ -184,8 +184,6 @@ var $ = jQuery,
                             mobileFirst: true,
                         });
                 	}
-
-	                $carousel3.slick('slickGoTo', 1);
                 });
 
             }); // Window.on

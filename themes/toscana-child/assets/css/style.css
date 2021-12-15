@@ -1469,12 +1469,17 @@ body.home .sf-menu .sfHover > li.current-menu-item > a {
 	text-decoration: underline;
 }
 
+.section-bakery-gallery__gallery-container-wrap .image-caption-wrap .image-caption a {
+	color: #19468C !important;
+}
+
 .section-bakery-gallery__gallery-container-wrap .image-counter {
 	line-height: 50px;
 	font-size: 50px;
 	font-weight: 500;
 	color: #19468C;
 	text-align: center;
+	display: none;
 }
 
 /****************************************************************
