@@ -129,6 +129,55 @@ var $ = jQuery,
                     }
                 });
             
+                $('.section-podcast__posts-container-wrap').each(function(){
+                    var $carousel3 = $(this);
+                    /* Initializes a slick carousel only on mobile screens */
+                    // slick on mobile
+                    if ($(window).width() >= 768) {
+                        if ($carousel3.hasClass('slick-initialized')) {
+                            $carousel3.slick('unslick');
+                        }
+
+                        // resize section height according to posts container
+                        $('section#section-podcast').height($('.section-podcast__posts-container').height()+150);
+                    }
+                    else{
+                        if (!$carousel3.hasClass('slick-initialized')) {
+                            $carousel3.slick({
+
+                                responsive: [
+                                
+                                                    {
+                                                        breakpoint: 768,
+                                                        settings: {
+                                                                    slidesToShow: 2,
+                                                                    slidesToScroll: 1,
+                                                                    arrows: false,
+                                                                    centerMode: true,                                                                                                
+                                                                    centerPadding: '40px',
+                                                                    mobileFirst: true,
+                                                                  }
+                                                    },
+                                                    
+                                                    {
+                                                        breakpoint: 420,
+                                                        settings: {
+                                                                    slidesToShow: 1,
+                                                                    slidesToScroll: 1,
+                                                                    arrows: false,
+                                                                    centerMode: true,                                                                                                
+                                                                    mobileFirst: true,
+                                                                  }
+                                                    },
+                                            ],
+                            });
+                        }
+
+                        // reset section height
+                        $('section#section-podcast').css('height', 'auto');
+                    }
+                });
+            
                 $('.section-lost-pastries__posts-container-wrap').each(function(){
                     var $carousel2 = $(this);
                     /* Initializes a slick carousel only on mobile screens */

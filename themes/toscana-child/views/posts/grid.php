@@ -4,7 +4,7 @@
  *
  * @author		Roy Hizkya
  * @package		page-templates
- * @version		1.2.0
+ * @version		1.3.0
  */
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
@@ -30,7 +30,9 @@ if ( $query->have_posts() ):
 
 		$subtitle = get_field( 'acf-post_sub_title' );
 
-		if ( 'lost-pastries' == $grid ) {
+		if ( 'podcast' == $grid ) {
+			include( locate_template( 'views/posts/grid-item-podcast.php' ) );
+		} elseif ( 'lost-pastries' == $grid ) {
 			include( locate_template( 'views/posts/grid-item-lost-pastries.php' ) );
 		} else {
 			include( locate_template( 'views/posts/grid-item.php' ) );

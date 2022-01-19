@@ -20,6 +20,7 @@ if ( have_posts() ) :
                     
                     <?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb( '<div id="breadcrumbs">','</div>' ); } ?>
                                     
+					<?php /*
 					<div class="entry-meta">
 						<?php if ( po_single_metadata_show( 'date' ) ) : ?>
 							<span><time datetime="<?php the_time('o-m-d'); ?>" class="entry-date date published updated"><?php echo get_the_date(); ?></time></span>
@@ -31,6 +32,7 @@ if ( have_posts() ) :
 							<span class="entry-user vcard author"><a class="fn" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" rel="author"><?php echo get_the_author(); ?></a></span>
 						<?php endif; ?>
 					</div>
+					*/ ?>
 				</header>
 				<div class="entry-content">
 					<?php if ( ! Pojo_Core::instance()->builder->display_builder() ) : ?>

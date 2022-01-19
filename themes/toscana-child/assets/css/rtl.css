@@ -356,6 +356,24 @@
     right: auto !important;
 }
 
+/* -- ***** Podcast Section 
+---------------------------------------------------------------*/
+
+.section-podcast__header::before {
+    left: 0;
+    right: auto;
+    -moz-transform: none;
+    -o-transform: none;
+    -webkit-transform: none;
+    transform: none;
+    filter: none;
+    -ms-filter: none;
+}
+
+.section-podcast__posts-container-wrap .grid-item {
+    float: right !important;
+}
+
 /**************/
 /* Responsive */
 /**************/
@@ -375,7 +393,21 @@
     
 }
 
+@media (min-width: 768px) {
 
+    /* -- ***** Podcast Section 
+    ---------------------------------------------------------------*/
+
+    .section-podcast__text-container {
+        left: 9%;
+        right: auto;
+    }
+
+    .section-podcast__posts-container {
+        left: auto;
+        right: 18.5%;
+    }
+}
 
 @media (max-width: 767px) {
 
@@ -667,6 +699,13 @@
     ---------------------------------------------------------------*/
 
     .section-lost-pastries__posts-container-wrap .grid-item .caption {
+        text-align: right;
+    }
+
+    /* -- ***** Podcast Section 
+    ---------------------------------------------------------------*/
+
+    .section-podcast__posts-container-wrap .grid-item .caption {
         text-align: right;
     }
 
