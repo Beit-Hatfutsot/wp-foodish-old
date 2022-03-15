@@ -1920,6 +1920,13 @@ body:not(.home).single-post .entry-post .entry-meta  {
 
 @media (min-width: 992px) {
 
+	/* -- ***** Podcast Section 
+	---------------------------------------------------------------*/
+
+	.section-podcast__posts-container-wrap .grid-item:nth-child(3n+1) {
+		clear: both;
+	}
+
 	/* -- ***** Lost Pastries Section 
 	---------------------------------------------------------------*/
 
@@ -1934,6 +1941,13 @@ body:not(.home).single-post .entry-post .entry-meta  {
 		font-size: 24px !important;
 	}
 	
+	/* -- ***** Podcast Section 
+	---------------------------------------------------------------*/
+
+	.section-podcast__posts-container-wrap .grid-item:nth-child(2n+1) {
+		clear: both;
+	}
+
 	/* -- ***** Lost Pastries Section 
 	---------------------------------------------------------------*/
 
