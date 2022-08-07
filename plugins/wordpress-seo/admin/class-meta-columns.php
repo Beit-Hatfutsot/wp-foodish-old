@@ -88,11 +88,11 @@ class WPSEO_Meta_Columns {
 		$added_columns = [];
 
 		if ( $this->analysis_seo->is_enabled() ) {
-			$added_columns['wpseo-score'] = '<span class="yoast-tooltip yoast-tooltip-n yoast-tooltip-alt" data-label="' . esc_attr__( 'SEO score', 'wordpress-seo' ) . '"><span class="yoast-column-seo-score yoast-column-header-has-tooltip"><span class="screen-reader-text">' . __( 'SEO score', 'wordpress-seo' ) . '</span></span></span>';
+			$added_columns['wpseo-score'] = '<span class="yoast-column-seo-score yoast-column-header-has-tooltip" data-tooltip-text="' . esc_attr__( 'SEO score', 'wordpress-seo' ) . '"><span class="screen-reader-text">' . __( 'SEO score', 'wordpress-seo' ) . '</span></span></span>';
 		}
 
 		if ( $this->analysis_readability->is_enabled() ) {
-			$added_columns['wpseo-score-readability'] = '<span class="yoast-tooltip yoast-tooltip-n yoast-tooltip-alt" data-label="' . esc_attr__( 'Readability score', 'wordpress-seo' ) . '"><span class="yoast-column-readability yoast-column-header-has-tooltip"><span class="screen-reader-text">' . __( 'Readability score', 'wordpress-seo' ) . '</span></span></span>';
+			$added_columns['wpseo-score-readability'] = '<span class="yoast-column-readability yoast-column-header-has-tooltip" data-tooltip-text="' . esc_attr__( 'Readability score', 'wordpress-seo' ) . '"><span class="screen-reader-text">' . __( 'Readability score', 'wordpress-seo' ) . '</span></span></span>';
 		}
 
 		$added_columns['wpseo-title']    = __( 'SEO Title', 'wordpress-seo' );
@@ -175,6 +175,11 @@ class WPSEO_Meta_Columns {
 
 		if ( $this->analysis_seo->is_enabled() ) {
 			$columns['wpseo-focuskw'] = 'wpseo-focuskw';
+			$columns['wpseo-score']   = 'wpseo-score';
+		}
+
+		if ( $this->analysis_readability->is_enabled() ) {
+			$columns['wpseo-score-readability'] = 'wpseo-score-readability';
 		}
 
 		return $columns;
@@ -590,7 +595,7 @@ class WPSEO_Meta_Columns {
 	/**
 	 * Determines whether the given post ID uses the default indexing settings.
 	 *
-	 * @param integer $post_id The post ID to check.
+	 * @param int $post_id The post ID to check.
 	 *
 	 * @return bool Whether or not the default indexing is being used for the post.
 	 */
@@ -609,14 +614,30 @@ class WPSEO_Meta_Columns {
 		switch ( $order_by ) {
 			case 'wpseo-metadesc':
 				return [
+					// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- Reason: Only used when user requests sorting.
 					'meta_key' => WPSEO_Meta::$meta_prefix . 'metadesc',
 					'orderby'  => 'meta_value',
 				];
 
 			case 'wpseo-focuskw':
 				return [
+					// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- Reason: Only used when user requests sorting.
 					'meta_key' => WPSEO_Meta::$meta_prefix . 'focuskw',
 					'orderby'  => 'meta_value',
+				];
+
+			case 'wpseo-score':
+				return [
+					// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- Reason: Only used when user requests sorting.
+					'meta_key' => WPSEO_Meta::$meta_prefix . 'linkdex',
+					'orderby'  => 'meta_value_num',
+				];
+
+			case 'wpseo-score-readability':
+				return [
+					// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_key -- Reason: Only used when user requests sorting.
+					'meta_key' => WPSEO_Meta::$meta_prefix . 'content_score',
+					'orderby'  => 'meta_value_num',
 				];
 		}
 
@@ -626,7 +647,7 @@ class WPSEO_Meta_Columns {
 	/**
 	 * Parses the score column.
 	 *
-	 * @param integer $post_id The ID of the post for which to show the score.
+	 * @param int $post_id The ID of the post for which to show the score.
 	 *
 	 * @return string The HTML for the SEO score indicator.
 	 */
@@ -641,7 +662,7 @@ class WPSEO_Meta_Columns {
 		}
 
 		if ( WPSEO_Meta::get_value( 'focuskw', $post_id ) === '' ) {
-			$rank  = new WPSEO_Rank( WPSEO_Rank::NO_FOCUS );
+			$rank  = new WPSEO_Rank( WPSEO_Rank::BAD );
 			$title = __( 'Focus keyphrase not set.', 'wordpress-seo' );
 
 			return $this->render_score_indicator( $rank, $title );
@@ -697,7 +718,7 @@ class WPSEO_Meta_Columns {
 	 *
 	 * @since 7.0
 	 *
-	 * @param string $post_type Optional. The post type to test, defaults to the current post post_type.
+	 * @param string|null $post_type Optional. The post type to test, defaults to the current post post_type.
 	 *
 	 * @return bool Whether or not the meta box (and associated columns etc) should be hidden.
 	 */
